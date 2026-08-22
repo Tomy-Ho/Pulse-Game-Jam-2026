@@ -4,22 +4,34 @@ using UnityEngine;
 public class MeditateAbility : Ability
 {
     private int counter;
+    private float normalSpeed;
+    private PlayerMovement playerMovement;
     public override void Activate(GameObject parent) {
         // Meditate can be used anytime, hold to meditate, fill "sanity" bar, lock player movement, play meditate animation
+        playerMovement = parent.GetComponent<PlayerMovement>();
+        normalSpeed = playerMovement.speed;
+
         SpriteRenderer sr = parent.GetComponent<SpriteRenderer>(); // FOR TESTING: CHANGE COLOR OF CIRCLE
         if(sr != null) sr.color = Color.blue;
-        //TODO: SET PLAYER MOVEMENT TO 0 (CAN'T MOVE WHILE MEDITATING), PLAY MEDITATE ANIMATION
-        
+        //TODO: PLAY ANIMATION
     }
 
     public override void AbilityLoop(GameObject parent) {
-        counter++; //FOR TESTING
-        Debug.Log("Counter: " + counter);
+        PlayerMovement playerMovement = parent.GetComponent<PlayerMovement>();
+        playerMovement.speed = 0;
+
+        //TODO: INCREASE SANITY + SANITY BAR
+
+        // counter++; //FOR TESTING
+        // Debug.Log("Counter: " + counter);
     }
 
 
     public override void BeginCooldown(GameObject parent) {
-        //TODO: INSERT HERE: SET PLAYER MOVEMENT TO NORMAL SPEED, EXIT MEDITATE
+        PlayerMovement playerMovement = parent.GetComponent<PlayerMovement>();
+        playerMovement.speed = normalSpeed;
+        
+
         SpriteRenderer sr = parent.GetComponent<SpriteRenderer>();
         if (sr != null) sr.color = Color.white;
 
