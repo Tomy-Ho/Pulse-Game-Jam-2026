@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheckTransform;
     public float groundCheckRadius;
     public LayerMask groundLayer;
-    bool isGrounded;
+    public bool isGrounded;
     float move;
     Rigidbody2D rb;
 
@@ -48,12 +48,12 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.linearVelocityY = jumpForce;
         }
-        
+
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
