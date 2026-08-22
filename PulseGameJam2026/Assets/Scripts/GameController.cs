@@ -16,11 +16,9 @@ public class GameController : MonoBehaviour
         Debug.Log("hahah");
         Debug.Log(enemyRespawn.GetComponent<EnemyRespawn>().currentNumEnemy.ToString());
     }
-    void OnEnemyDefeat()
+    public void ScoreOnEnemyDefeat()
     {
-        //if player defeats one enemy then spawn new stronger one and increment gameScore
-        //scoreManager.GetComponent<ScoreManager>().IncrementScore();
-        //enemyRespawn.GetComponent<EnemyRespawn>().SpawnNewEnemy();
+        scoreManager.GetComponent<ScoreManager>().IncrementScore();
     }
 
     void OnPlayerDefeat()
