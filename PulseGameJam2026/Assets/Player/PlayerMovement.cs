@@ -59,11 +59,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (move > 0)
         {
-            transform.right = Vector2.right;  // Nach rechts
+            transform.localScale = new Vector3(1, 1, 1);  // Nach rechts
         }
         else if (move < 0)
         {
-            transform.right = Vector2.left;   // Nach links
+            transform.localScale = new Vector3(-1, 1, 1);  // Nach links
         }
         isGrounded = Physics2D.OverlapCircle(groundCheckTransform.position, groundCheckRadius, groundLayer);
         rb.linearVelocityX = move * speed;
