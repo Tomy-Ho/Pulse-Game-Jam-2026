@@ -80,6 +80,7 @@ GameObject:
   - component: {fileID: 3329512718281803457}
   - component: {fileID: 1071333416665637986}
   - component: {fileID: -9073327463758728643}
+  - component: {fileID: 1677655755566239809}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -310,7 +311,7 @@ MonoBehaviour:
     m_Bits: 64
   attackDamage: 25
   cooldownTime: 0.5
-  player: {fileID: 6642308946205135782}
+  playerObject: {fileID: 6642308946205135782}
 --- !u!114 &3329512718281803457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,3 +358,18 @@ MonoBehaviour:
   player: {fileID: 6642308946205135782}
   ability: {fileID: 11400000, guid: 81893811dec9ce343bc9a4eeb6be4631, type: 2}
   key: 51
+--- !u!114 &1677655755566239809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6642308946205135782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94faf85354b8ce04ca5cc06c50d1837d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AbilityHolderPRESS
+  player: {fileID: 6642308946205135782}
+  ability: {fileID: 11400000, guid: c695e03024c2c7c41a7239ae917fb0c8, type: 2}
+  key: 19

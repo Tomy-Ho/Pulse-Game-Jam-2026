@@ -16,7 +16,7 @@ public class Logic : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        SearchRightPlayerTag();
         enemy = GetComponent<Rigidbody2D>();
         transform.localScale = new Vector3(enemySize, enemySize, enemySize);
     }
@@ -36,6 +36,22 @@ public class Logic : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);  // Nach links
         }
         walkingsim();
+    }
+
+    void SearchRightPlayerTag()
+    {
+        GameObject ghostPlayerTag = GameObject.FindGameObjectWithTag("GhostPlayer");
+        if (ghostPlayerTag != null)
+        {
+            target = GameObject.FindGameObjectWithTag("GhostPlayer").transform;  
+            return;         
+        } 
+        
+        GameObject playerTag = GameObject.FindGameObjectWithTag("Player");
+        if (playerTag != null)
+        {
+            target = GameObject.FindGameObjectWithTag("Player").transform;
+        }
     }
 
     void OnDrawGizmosSelected()

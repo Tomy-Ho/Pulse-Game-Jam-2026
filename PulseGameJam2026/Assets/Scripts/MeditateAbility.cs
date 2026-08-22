@@ -18,6 +18,11 @@ public class MeditateAbility : Ability
         SpriteRenderer sr = parent.GetComponent<SpriteRenderer>(); // FOR TESTING: CHANGE COLOR OF CIRCLE
         if(sr != null) sr.color = Color.blue;
         //TODO: PLAY ANIMATION
+
+        if (parent.tag.Equals("GhostPlayer"))
+        {
+            parent.tag = "Player";
+        }
     }
 
     public override void AbilityLoop(GameObject parent) {
