@@ -19,7 +19,7 @@ public class MeditateAbility : Ability
     public override void AbilityLoop(GameObject parent) {
         PlayerMovement playerMovement = parent.GetComponent<PlayerMovement>();
         playerMovement.speed = 0;
-
+        playerMovement.canJump = false;
         //TODO: INCREASE SANITY + SANITY BAR
 
         // counter++; //FOR TESTING
@@ -30,8 +30,8 @@ public class MeditateAbility : Ability
     public override void BeginCooldown(GameObject parent) {
         PlayerMovement playerMovement = parent.GetComponent<PlayerMovement>();
         playerMovement.speed = normalSpeed;
+        playerMovement.canJump = true;
         
-
         SpriteRenderer sr = parent.GetComponent<SpriteRenderer>();
         if (sr != null) sr.color = Color.white;
 
