@@ -13,8 +13,6 @@ public class EnemyAttack : MonoBehaviour
     float cooldownTimer = 0f;
     public float[][] attackPatterns;
 
-
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

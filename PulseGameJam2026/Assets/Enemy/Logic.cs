@@ -27,6 +27,14 @@ public class Logic : MonoBehaviour
         playerToEnemyDistance = Vector2.Distance(transform.position, target.position);
         funnyman3(playerToEnemyDistance);
 
+        if (target.position.x - transform.position.x < 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);  // Nach rechts
+        }
+        else if (target.position.x - transform.position.x > 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);  // Nach links
+        }
         walkingsim();
     }
 
