@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 740641648187835112}
   - component: {fileID: 2609052494492247594}
   - component: {fileID: 3329512718281803457}
+  - component: {fileID: 1071333416665637986}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -284,6 +285,8 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  isGrounded: 0
+  facingRight: 1
 --- !u!114 &2609052494492247594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,3 +321,18 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 0}
+--- !u!114 &1071333416665637986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6642308946205135782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfb75e9552c97234baec99b38464b35f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AbilityHolderHOLD
+  player: {fileID: 6642308946205135782}
+  ability: {fileID: 11400000, guid: 1d3bfca84a1040144aa95035f29ae9c7, type: 2}
+  key: 33
