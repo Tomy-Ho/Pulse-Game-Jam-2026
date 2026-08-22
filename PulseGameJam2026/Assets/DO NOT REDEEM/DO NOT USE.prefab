@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 5054174555557705885}
   - component: {fileID: 4090937917145862068}
   m_Layer: 6
-  m_Name: EnemyPrefab2
+  m_Name: DO NOT USE
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -287,6 +287,6 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 0
-  attackDamage: 25
-  cooldownTime: 0.5
+  attackDamage: 100
+  cooldownTime: 0.1
   attackInfos: []

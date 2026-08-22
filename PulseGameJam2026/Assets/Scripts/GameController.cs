@@ -13,6 +13,16 @@ public class GameController : MonoBehaviour
     public GameObject playerObject;
 
     public GameObject enemyRespawn;
+
+    void Start()
+    {
+        if(Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
     public void OnPlayerDefeat()
     {
         //if player health==0 then gameover

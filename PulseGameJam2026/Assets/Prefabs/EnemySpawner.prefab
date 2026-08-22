@@ -107,4 +107,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyRespawn
   enemyObject: {fileID: 0}
   respawnDelay: 1
-  enemyPrefab: {fileID: 8556361404489358622, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
+  enemyPrefab: {fileID: 5346334957501553645, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
