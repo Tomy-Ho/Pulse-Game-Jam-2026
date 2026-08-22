@@ -46,4 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameController
   scoreManager: {fileID: 6570499004345138466, guid: a1eeb1278e62efc45aa5407cdd5776d4, type: 3}
   playerObject: {fileID: 6642308946205135782, guid: fd06f79f113fbe14dbd2b11e20f57f8c, type: 3}
-  enemyRespawn: {fileID: 6217322948731488828, guid: fca0ea1eb19285e44bc3b8049534f71b, type: 3}
+  enemyRespawn: {fileID: 8556361404489358622, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
