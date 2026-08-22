@@ -12,8 +12,9 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-        enemyRespawn.GetComponent<EnemyRespawn>().SpawnNewEnemy();
+        enemyRespawn.GetComponent<EnemyRespawn>().StartSpawnEnemy();
         Debug.Log("hahah");
+        Debug.Log(enemyRespawn.GetComponent<EnemyRespawn>().currentNumEnemy.ToString());
     }
     void OnEnemyDefeat()
     {
