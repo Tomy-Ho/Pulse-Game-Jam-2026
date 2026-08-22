@@ -6,6 +6,7 @@ public class HealthManager : MonoBehaviour
     public int currentHealth;
 
     public HealthBar healthBar;
+    public GameObject enemyObj;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,17 +17,19 @@ public class HealthManager : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-
-        if(currentHealth <= 0)
-        {
-            Destroy(gameObject);
-        }
+        OnEnemyDeath();
         healthBar.SetCurrentHealth(currentHealth);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnEnemyDeath()
     {
+        if(currentHealth <= 0)
+        {
         
+            EnemyRespawn er = enemyObj.GetComponent<EnemyRespawn>();
+            er.OnEnemyDeath();
+            
+            Destroy(gameObject);
+        }
     }
 }

@@ -9,20 +9,7 @@ public class GameController : MonoBehaviour
     public GameObject playerObject;
 
     public GameObject enemyRespawn;
-
-    void Start()
-    {
-        enemyRespawn.GetComponent<EnemyRespawn>().StartSpawnEnemy();
-        Debug.Log("hahah");
-        Debug.Log(enemyRespawn.GetComponent<EnemyRespawn>().currentNumEnemy.ToString());
-    }
-    void OnEnemyDefeat()
-    {
-        //if player defeats one enemy then spawn new stronger one and increment gameScore
-        //scoreManager.GetComponent<ScoreManager>().IncrementScore();
-        //enemyRespawn.GetComponent<EnemyRespawn>().SpawnNewEnemy();
-    }
-
+    
     void OnPlayerDefeat()
     {
         //if player health==0 then gameover

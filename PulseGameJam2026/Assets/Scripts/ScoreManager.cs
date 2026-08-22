@@ -4,15 +4,16 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     private float score = 0f;
-    public TextMeshProUGUI scoreText;
+    public TMP_Text scoreText;
     void Start()
     {
         UpdateScoreText();
     }
 
-    public void IncrementScore()
+    public void ScoreOnEnemyDefeat()
     {
         score++;
+        Debug.Log("hahaha");
         UpdateScoreText();
     }
 
@@ -24,6 +25,7 @@ public class ScoreManager : MonoBehaviour
 
     void UpdateScoreText()
     {
+        Debug.Log("Score: " + score.ToString());
         scoreText.text = "Score: " + score.ToString();
     }
 }

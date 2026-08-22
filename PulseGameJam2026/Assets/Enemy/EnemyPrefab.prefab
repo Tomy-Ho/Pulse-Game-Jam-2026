@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4609337819885637058}
   - component: {fileID: 807190554995387024}
   - component: {fileID: 8843768820855440106}
-  - component: {fileID: 8998728955693683931}
   m_Layer: 6
   m_Name: EnemyPrefab
   m_TagString: Enemy
@@ -186,6 +185,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 538073654411927538, guid: 4b202127524761642b143a2e8b3697eb, type: 3}
+  enemyObj: {fileID: 8675676290316029442, guid: 695ab8f36170d0347a72def50009a73a, type: 3}
 --- !u!114 &8843768820855440106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,23 +207,6 @@ MonoBehaviour:
   groundCheckRadius: 0
   enemy: {fileID: 0}
   enemySize: 1
---- !u!114 &8998728955693683931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6217322948731488828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05d2e5439de528b4792582d9c97c7b6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyRespawn
-  enemyObject: {fileID: 0}
-  respawnDelay: 1
-  enemyPrefab: {fileID: 6217322948731488828}
-  maxNumEnemy: 1
-  currentNumEnemy: 0
 --- !u!1 &8420296223262333612
 GameObject:
   m_ObjectHideFlags: 0
