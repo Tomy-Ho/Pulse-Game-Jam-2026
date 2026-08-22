@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
     public bool isGrounded;
     float move;
+    public bool facingRight = true;
     Rigidbody2D rb;
 
     void Awake()
@@ -51,14 +52,19 @@ public class PlayerMovement : MonoBehaviour
 
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
 
-    }
 
     // Update is called once per frame
     void Update()
     {
+        if (move > 0)
+        {
+            transform.right = Vector2.right;  // Nach rechts
+        }
+        else if (move < 0)
+        {
+            transform.right = Vector2.left;   // Nach links
+        }
         isGrounded = Physics2D.OverlapCircle(groundCheckTransform.position, groundCheckRadius, groundLayer);
         rb.linearVelocityX = move * speed;
     }
