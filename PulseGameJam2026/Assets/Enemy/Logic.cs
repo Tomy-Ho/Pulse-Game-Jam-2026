@@ -5,8 +5,8 @@ public class Logic : MonoBehaviour
     // nachher wegmachen
     public float range;
     public float playerToEnemyDistance;
-    public float speed;
-    public float jumpForce;
+    public float baseSpeed = 2f;
+    public float baseJumpForce = 4f;
     public Transform groundCheckTransform;
     public float groundCheckRadius;
     public Rigidbody2D enemy;
@@ -38,16 +38,10 @@ public class Logic : MonoBehaviour
 
     void walkingsim()
     {
-        /*
-        if (target.GetComponent<PlayerMovement>().isGrounded == false)
+        if (playerToEnemyDistance > 2f)
         {
-            transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.position.x, -2.5f), speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, target.position, baseSpeed * Time.deltaTime);
         }
-        else
-        {
-        }*/
-        transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-
     }
 
     void funnyman3(float playerToEnemyDistance)
