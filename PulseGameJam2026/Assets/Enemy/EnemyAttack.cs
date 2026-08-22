@@ -5,32 +5,28 @@ public class EnemyAttack : MonoBehaviour
     float attackDelay;
 
     public Transform attackOrigin;
-    public float attackHitboxSize;
     private Vector2 attackHitbox;
     public LayerMask playerMask;
     public int attackDamage;
     public float cooldownTime;
     float cooldownTimer = 0f;
-    public float[][] attackPatterns;
-
+    public float[] attackInfos;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        attackPatterns = new float[][]
-        {
-            new float[] { 1f }, // Pattern 1: Attack in a square area
-            new float[] { 2f }, // Pattern 2: Attack in a larger square area
-            new float[] { 1.5f } // Pattern 3: Attack in a smaller square area
-        };
-
-        attackHitboxSize = attackPatterns[Random.Range(0, attackPatterns.Length)][0];
-
-        attackHitbox = new Vector2(attackHitboxSize, attackHitboxSize * 1.5f);
+        getAttackInfos();
         playerMask = LayerMask.GetMask("Player");
         attackDamage = 25;
         cooldownTime = 2f;
+    }
+
+    void getAttackInfos()
+    {
+        attackInfos =  new Attackpatterns().attackPatterns[Random.Range(0, new Attackpatterns().attackPatterns.Length)];
+        attackOrigin.position = new Vector2(transform.position.x + attackInfos[0], transform.position.y + attackInfos[1]);
+        attackHitbox = new Vector2(attackInfos[2], attackInfos[3]);
     }
 
     void Attack()
@@ -46,8 +42,7 @@ public class EnemyAttack : MonoBehaviour
             }
             cooldownTimer = cooldownTime;
 
-            attackHitboxSize = attackPatterns[Random.Range(0, attackPatterns.Length)][0];
-            attackHitbox = new Vector2(attackHitboxSize, attackHitboxSize * 1.5f);
+            getAttackInfos();
         }
     }
 
