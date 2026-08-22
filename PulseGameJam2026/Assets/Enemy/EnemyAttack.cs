@@ -7,7 +7,7 @@ public class EnemyAttack : MonoBehaviour
     public Transform attackOrigin;
     public float attackHitboxSize = 1f;
     private Vector2 attackHitbox;
-    public LayerMask playerMask = LayerMask.GetMask("Player");
+    public LayerMask playerMask;
     public int attackDamage = 50;
     public float cooldownTime = 0.5f;
     float cooldownTimer = 0f;
@@ -16,6 +16,7 @@ public class EnemyAttack : MonoBehaviour
     void Start()
     {
         attackHitbox = new Vector2(attackHitboxSize, attackHitboxSize * 1.5f);
+        playerMask = LayerMask.GetMask("Player");
     }
 
     void Attack()
