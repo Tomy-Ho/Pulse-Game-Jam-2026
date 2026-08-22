@@ -4,25 +4,27 @@ using UnityEngine;
 public class DashAbility : Ability
 {
     private PlayerMovement playerMovement;
-    private Rigidbody2D rb;
+    private EnemyAttack enemyAttack;
     private float normalSpeed;
     public float dashSpeed;
     public override void Activate(GameObject parent){
         playerMovement = parent.GetComponent<PlayerMovement>();
-        normalSpeed = playerMovement.speed;
-        playerMovement.canMove = false;
+        enemyAttack = parent.GetComponent<EnemyAttack>();
 
-        playerMovement.speed = dashSpeed; 
+        normalSpeed = playerMovement.speed;
+        playerMovement.speed = dashSpeed;
+        
     }
 
     public override void BeginCooldown(GameObject parent){
-        playerMovement.speed = normalSpeed;
+        playerMovement.speed = normalSpeed;    
         playerMovement.canMove = true;
+       
     }
 
     public override void AbilityLoop(GameObject parent)
     {
-    
+        
     }
 
 }

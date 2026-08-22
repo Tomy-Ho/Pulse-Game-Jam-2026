@@ -23,8 +23,9 @@ public class AbilityHolderPRESS : MonoBehaviour
             case AbilityState.ready:
                 if (Keyboard.current[key].wasPressedThisFrame){
                     ability.Activate(gameObject);
-                    state = AbilityState.active;
                     activeTime = ability.activeTime;
+                    state = AbilityState.active;
+                    
                 }
                 break;
             case AbilityState.active:
