@@ -9,7 +9,6 @@ public class EnemyRespawn : MonoBehaviour
     [Serialize] public float respawnDelay = 1f;
     public GameObject enemyPrefab;
     public float maxNumEnemy = 1f;
-    public GameObject scoreManager;
  
     void Update()
     {
@@ -25,7 +24,7 @@ public class EnemyRespawn : MonoBehaviour
     }
     public void OnEnemyDeath()
     {
-        scoreManager.GetComponentInChildren<ScoreManager>().ScoreOnEnemyDefeat();
+        ScoreManager.Instance.ScoreOnEnemyDefeat();
     }
     public void SpawnNewEnemy()
     {
