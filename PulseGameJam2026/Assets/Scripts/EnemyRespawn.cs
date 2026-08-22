@@ -7,44 +7,36 @@ public class EnemyRespawn : MonoBehaviour
     public GameObject enemyObject;
     [Serialize] public float respawnDelay = 1f;
     public GameObject enemyPrefab;
-    public float maxNumEnemy = 1f;
-    public float currentNumEnemy = 0;
 
-    void Start()
+    void Update()
     {
-        currentNumEnemy = 0;
-    }
-    public void OnEnemyDeath()
-    {
-        if(enemyObject.GetComponent<HealthManager>().currentHealth <= 0)
+        if (enemyObject == null)
         {
-            StartCoroutine(RespawnTimer());
-            currentNumEnemy = 0;
-            Debug.Log("REspawn ahahaha");
+            float timer = respawnDelay;
+
+            if(timer <= 0)
+            {
+                SpawnNewEnemy();
+            }
         }
     }
 
-    IEnumerator RespawnTimer()
+    public void OnEnemyDeath()
     {
-        yield return new WaitForSeconds(respawnDelay);
-        SpawnNewEnemy();
+        ScoreManager.Instance.ScoreOnEnemyDefeat();
     }
+
     public void SpawnNewEnemy()
     {
-        Debug.Log("hi" + currentNumEnemy.ToString());
-        if (currentNumEnemy <= 0)
+        if (enemyObject == null)
         {
-            Debug.Log("hello");
             enemyObject = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
-            currentNumEnemy++;
         }
     }
 
     public void StartSpawnEnemy()
     {
-        currentNumEnemy = 0;
         enemyObject = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
-        currentNumEnemy++;
     }
 }
 
