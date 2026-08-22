@@ -8,15 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7647441021874439125}
-  - component: {fileID: 8772258110831964391}
-  - component: {fileID: 6752969134562861294}
-  - component: {fileID: 4609337819885637058}
-  - component: {fileID: 807190554995387024}
-  - component: {fileID: 8843768820855440106}
-  m_Layer: 6
-  m_Name: EnemyPrefab
-  m_TagString: Enemy
+  - component: {fileID: 5861021597616781286}
+  m_Layer: 0
+  m_Name: DamageZone
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -254,9 +249,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HealthManager
   maxHealth: 100
   currentHealth: 0
-  healthBar: {fileID: 538073654411927538, guid: 4b202127524761642b143a2e8b3697eb, type: 3}
-  enemyObj: {fileID: 8675676290316029442, guid: 695ab8f36170d0347a72def50009a73a, type: 3}
---- !u!114 &8843768820855440106
+  healthBar: {fileID: 0}
+--- !u!114 &5054174555557705885
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -277,34 +271,39 @@ MonoBehaviour:
   groundCheckRadius: 0
   enemy: {fileID: 0}
   enemySize: 1
---- !u!1 &8420296223262333612
-GameObject:
+--- !u!114 &4090937917145862068
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5368461582590972981}
-  m_Layer: 0
-  m_Name: GroundCheck
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5368461582590972981
-Transform:
+  m_GameObject: {fileID: 8556361404489358622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab4122d005cd1af46a2387738a9ec3fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
+  attackOrigin: {fileID: 5861021597616781286}
+  attackHitboxSize: 1
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  attackDamage: 25
+  cooldownTime: 0.5
+--- !u!114 &7343999535938323946
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8420296223262333612}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7647441021874439125}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 8556361404489358622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05d2e5439de528b4792582d9c97c7b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyRespawn
+  enemyObject: {fileID: 0}
+  respawnDelay: 1
+  enemyPrefab: {fileID: 0}
+  maxNumEnemy: 1
+  currentNumEnemy: 0

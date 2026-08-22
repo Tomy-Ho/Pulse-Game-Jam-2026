@@ -1,7 +1,6 @@
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
 
 public class EnemyRespawn : MonoBehaviour
 {
@@ -9,34 +8,43 @@ public class EnemyRespawn : MonoBehaviour
     [Serialize] public float respawnDelay = 1f;
     public GameObject enemyPrefab;
     public float maxNumEnemy = 1f;
- 
-    void Update()
-    {
-        if(enemyObject == null)
-        {
-            float timer = respawnDelay;
+    public float currentNumEnemy = 0;
 
-            if(timer <= 0)
-            {
-                SpawnNewEnemy();
-            }
-        }
+    void Start()
+    {
+        currentNumEnemy = 0;
     }
     public void OnEnemyDeath()
     {
-        ScoreManager.Instance.ScoreOnEnemyDefeat();
+        if(enemyObject.GetComponent<HealthManager>().currentHealth <= 0)
+        {
+            StartCoroutine(RespawnTimer());
+            currentNumEnemy = 0;
+            Debug.Log("REspawn ahahaha");
+        }
+    }
+
+    IEnumerator RespawnTimer()
+    {
+        yield return new WaitForSeconds(respawnDelay);
+        SpawnNewEnemy();
     }
     public void SpawnNewEnemy()
     {
-        if (enemyObject == null)
+        Debug.Log("hi" + currentNumEnemy.ToString());
+        if (currentNumEnemy <= 0)
         {
+            Debug.Log("hello");
             enemyObject = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+            currentNumEnemy++;
         }
     }
 
     public void StartSpawnEnemy()
     {
+        currentNumEnemy = 0;
         enemyObject = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+        currentNumEnemy++;
     }
 }
 

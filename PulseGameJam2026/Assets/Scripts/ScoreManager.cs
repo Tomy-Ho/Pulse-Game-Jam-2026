@@ -3,29 +3,16 @@ using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static ScoreManager Instance
-    {
-        get;
-        private set;
-    }
     private float score = 0f;
-    public TMP_Text scoreText;
-
-    void Awake()
+    public TextMeshProUGUI scoreText;
+    void Start()
     {
-        if (Instance != null && Instance == this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
-        ResetScore();
+        UpdateScoreText();
     }
 
-    public void ScoreOnEnemyDefeat()
+    public void IncrementScore()
     {
         score++;
-        Debug.Log("hahaha");
         UpdateScoreText();
     }
 
@@ -37,14 +24,6 @@ public class ScoreManager : MonoBehaviour
 
     void UpdateScoreText()
     {
-        Debug.Log("Score: " + score.ToString());
-        if(scoreText != null)
-        {
-            scoreText.text = "Score: " + score.ToString();
-        }
-        else
-        {
-            Debug.Log("error, no scoretext");
-        }
+        scoreText.text = "Score: " + score.ToString();
     }
 }
