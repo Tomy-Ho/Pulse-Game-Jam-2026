@@ -1294,6 +1294,18 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1914598720}
+    - target: {fileID: 4090937917145862068, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
+      propertyPath: attackDamage
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090937917145862068, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
+      propertyPath: cooldownTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5861021597616781286, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7883941715655359823, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.31
@@ -1351,6 +1363,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 740641648187835112, guid: fd06f79f113fbe14dbd2b11e20f57f8c, type: 3}
+      propertyPath: jumpForce
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 813124989795378772, guid: fd06f79f113fbe14dbd2b11e20f57f8c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.75
@@ -1403,6 +1419,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1247974030}
+    - target: {fileID: 3329512718281803457, guid: fd06f79f113fbe14dbd2b11e20f57f8c, type: 3}
+      propertyPath: maxHealth
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 4329814616501262392, guid: fd06f79f113fbe14dbd2b11e20f57f8c, type: 3}
       propertyPath: m_Layer
       value: 7
