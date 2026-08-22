@@ -1290,17 +1290,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-<<<<<<< HEAD
     - target: {fileID: 538457917825941489, guid: 1a55b01258533c8499b9cc71a7834444, type: 3}
       propertyPath: m_Name
       value: GameControllerObject
 =======
->>>>>>> parent of 8726d8d (Merge branch 'feat-respawn' into dev)
     - target: {fileID: 2602671362278703481, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1914598720}
-<<<<<<< HEAD
     - target: {fileID: 4090937917145862068, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
       propertyPath: attackDamage
       value: 25
@@ -1318,9 +1315,11 @@ PrefabInstance:
       value: 6.31
       objectReference: {fileID: 0}
     - target: {fileID: 7879579375040569810, guid: 1a55b01258533c8499b9cc71a7834444, type: 3}
-=======
     - target: {fileID: 7883941715655359823, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
->>>>>>> parent of 8726d8d (Merge branch 'feat-respawn' into dev)
+      propertyPath: m_LocalPosition.x
+      value: 6.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883941715655359823, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.31
       objectReference: {fileID: 0}
