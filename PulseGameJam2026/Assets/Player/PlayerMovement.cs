@@ -5,8 +5,8 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [NonSerialized] public InputSystem_Actions actions;
-    public float speed = 8f;
-    public float jumpForce = 16f;
+    public float speed;
+    public float jumpForce;
     public Transform groundCheckTransform;
     public float groundCheckRadius;
     public LayerMask groundLayer;
