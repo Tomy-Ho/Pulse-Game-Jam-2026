@@ -287,8 +287,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   isGrounded: 0
+  move: 0
   facingRight: 1
   canJump: 1
+  canMove: 1
 --- !u!114 &2609052494492247594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,6 +310,7 @@ MonoBehaviour:
     m_Bits: 64
   attackDamage: 25
   cooldownTime: 0.5
+  player: {fileID: 6642308946205135782}
 --- !u!114 &3329512718281803457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,6 +326,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 0}
+  enemyObject: {fileID: 0}
 --- !u!114 &1071333416665637986
 MonoBehaviour:
   m_ObjectHideFlags: 0
