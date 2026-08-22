@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     float move;
     public bool facingRight = true;
     Rigidbody2D rb;
+    public bool canJump = true;
+    public bool canMove = true;
 
     void Awake()
     {
@@ -40,12 +42,15 @@ public class PlayerMovement : MonoBehaviour
 
     void Movement(InputAction.CallbackContext ctx)
     {
-        move = ctx.ReadValue<Vector2>().x;
+        if(canMove){
+            move = ctx.ReadValue<Vector2>().x;    
+        }
+        
     }
 
     void Jumping(InputAction.CallbackContext ctx)
     {
-        if (ctx.performed & isGrounded)
+        if (ctx.performed & isGrounded & canJump)
         {
             rb.linearVelocityY = jumpForce;
         }
