@@ -5,24 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+    public static GameController instance
+    {
+        get;
+        private set;
+    }
+
     public GameObject scoreManager;
     public GameObject playerObject;
 
     public GameObject enemyRespawn;
     
-    void OnPlayerDefeat()
+    public void OnPlayerDefeat()
     {
         //if player health==0 then gameover
-        if(playerObject.IsDestroyed())
+        if(playerObject.GetComponent<HealthManager>().currentHealth <= 0)
         {
            GameOver(); 
         }
     }
 
-
     void GameOver()
     {
-        scoreManager.GetComponent<ScoreManager>().ResetScore();
+        ScoreManager.Instance.ResetScore();
         SceneManager.LoadScene(3);
     }
 

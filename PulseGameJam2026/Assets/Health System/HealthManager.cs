@@ -27,7 +27,15 @@ public class HealthManager : MonoBehaviour
         {
         
             EnemyRespawn er = enemyObj.GetComponent<EnemyRespawn>();
-            er.OnEnemyDeath();
+
+            if (gameObject.tag.Equals("Enemy"))
+            {
+                er.OnEnemyDeath();
+            }
+            else
+            {
+                GameController.instance.OnPlayerDefeat();
+            }
             
             Destroy(gameObject);
         }
