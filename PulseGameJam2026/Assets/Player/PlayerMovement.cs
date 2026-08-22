@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(groundCheckTransform.position, groundCheckRadius);
     }
 }
