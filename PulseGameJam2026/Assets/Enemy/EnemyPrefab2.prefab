@@ -248,7 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HealthManager
   maxHealth: 100
   currentHealth: 0
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 538073654411927538, guid: 4b202127524761642b143a2e8b3697eb, type: 3}
   enemyObject: {fileID: 5736105014304777907, guid: 130f153145ac7784d8fbce3677df7512, type: 3}
 --- !u!114 &5054174555557705885
 MonoBehaviour:

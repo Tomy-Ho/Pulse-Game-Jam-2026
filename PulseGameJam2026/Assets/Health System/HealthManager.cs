@@ -7,7 +7,7 @@ public class HealthManager : MonoBehaviour
 
     public HealthBar healthBar;
     public GameObject enemyObject;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -35,7 +35,6 @@ public class HealthManager : MonoBehaviour
             {
                 GameController.Instance.OnPlayerDefeat();
             }
-
             Destroy(gameObject);
         }
     }
