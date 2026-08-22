@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,7 +12,14 @@ public class PlayerAttack : MonoBehaviour
     public LayerMask enemyMask;
     public int attackDamage = 25;
     public float cooldownTime = 0.5f;
+    public GameObject playerObject;
     float cooldownTimer = 0f;
+    private HealthManager playerHealth;
+    public GameObject player;
+    public bool canAttack = true;
+  
+
+    [HideInInspector] public bool isGhost = false;
 
     [NonSerialized] public InputSystem_Actions actions;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,6 +27,7 @@ public class PlayerAttack : MonoBehaviour
     {
         actions = new InputSystem_Actions();
         actions.Player.Attack.AddBinding("<Mouse>/leftButton");
+        
     }
 
     void OnEnable()
@@ -34,24 +43,50 @@ public class PlayerAttack : MonoBehaviour
     }
     void Start()
     {
-        
+        playerHealth = player.GetComponent<HealthManager>();
     }
 
     // Update is called once per frame
     void OnAttack(InputAction.CallbackContext ctx)
     {
-        if(cooldownTimer <= 0)
-        {
-            Collider2D[] enemy = Physics2D.OverlapCircleAll(attackOrigin.position, attackRadius, enemyMask);
-            foreach (var enemies in enemy)
+        if(canAttack){
+            playerHealth.currentHealth -= 3;
+            playerHealth.healthBar.SetCurrentHealth(playerHealth.currentHealth);
+            if(cooldownTimer <= 0)
             {
-                enemies.GetComponent<HealthManager>().TakeDamage(attackDamage);
+                Collider2D[] enemy = Physics2D.OverlapCircleAll(attackOrigin.position, attackRadius, enemyMask);
+                foreach (var enemies in enemy)
+                {
+                    if (enemies.tag.Equals("GhostEnemy"))
+                    {
+                        if (isGhost)
+                        {
+                            enemies.GetComponent<HealthManager>().TakeDamage(attackDamage); 
+                        } 
+                    else
+                        {
+                            UnityEngine.Debug.Log("Switch player form to ghost");
+                        }
+                    return;
+                    }
+                
+                    if(enemies.tag.Equals("Enemy"))
+                    {
+                        if (!isGhost)
+                        {
+                            enemies.GetComponent<HealthManager>().TakeDamage(attackDamage); 
+                        }
+                    } 
+                }
+                cooldownTimer = cooldownTime;
+                
+                
+                
             }
-            cooldownTimer = cooldownTime;
-        }
-        else
-        {
-            cooldownTimer -= Time.deltaTime;
+            else
+            {
+                cooldownTimer -= Time.deltaTime;
+            }   
         }
     }
 

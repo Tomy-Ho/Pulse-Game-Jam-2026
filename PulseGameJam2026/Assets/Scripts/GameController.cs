@@ -5,37 +5,35 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    public GameObject scoreManager;
+    public static GameController Instance
+    {
+        get;
+        private set;
+    }
     public GameObject playerObject;
 
     public GameObject enemyRespawn;
 
     void Start()
     {
-        enemyRespawn.GetComponent<EnemyRespawn>().StartSpawnEnemy();
-        Debug.Log("hahah");
-        Debug.Log(enemyRespawn.GetComponent<EnemyRespawn>().currentNumEnemy.ToString());
+        if(Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
     }
-    void OnEnemyDefeat()
-    {
-        //if player defeats one enemy then spawn new stronger one and increment gameScore
-        //scoreManager.GetComponent<ScoreManager>().IncrementScore();
-        //enemyRespawn.GetComponent<EnemyRespawn>().SpawnNewEnemy();
-    }
-
-    void OnPlayerDefeat()
+    public void OnPlayerDefeat()
     {
         //if player health==0 then gameover
-        if(playerObject.IsDestroyed())
+        if(playerObject.GetComponent<HealthManager>().currentHealth <= 0)
         {
            GameOver(); 
         }
     }
-
-
     void GameOver()
     {
-        scoreManager.GetComponent<ScoreManager>().ResetScore();
+        ScoreManager.Instance.ResetScore();
         SceneManager.LoadScene(3);
     }
 

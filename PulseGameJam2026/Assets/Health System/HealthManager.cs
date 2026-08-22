@@ -6,7 +6,8 @@ public class HealthManager : MonoBehaviour
     public int currentHealth;
 
     public HealthBar healthBar;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject enemyObject;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -16,17 +17,25 @@ public class HealthManager : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-
-        if(currentHealth <= 0)
-        {
-            Destroy(gameObject);
-        }
+        onEnemyDeath();
         healthBar.SetCurrentHealth(currentHealth);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void onEnemyDeath()
     {
-        
+        if (currentHealth <= 0)
+        {
+            EnemyRespawn er = enemyObject.GetComponent<EnemyRespawn>();
+
+            if (gameObject.tag.Equals("Enemy") || gameObject.tag.Equals("GhostEnemy"))
+            {
+                er.OnEnemyDeath();
+            }
+            else
+            {
+                GameController.Instance.OnPlayerDefeat();
+            }
+            Destroy(gameObject);
+        }
     }
 }

@@ -6,7 +6,6 @@ public class HealthBar : MonoBehaviour
     public Slider slider;
     public Gradient gradient;
     public Image fill;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     public void SetMaxHealth(int health)
     {
@@ -21,15 +20,5 @@ public class HealthBar : MonoBehaviour
         slider.value = health;
 
         fill.color = gradient.Evaluate(slider.normalizedValue);
-    }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

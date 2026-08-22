@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public float groundCheckRadius;
     public LayerMask groundLayer;
     public bool isGrounded;
-    float move;
+    public float move;
     public bool facingRight = true;
     Rigidbody2D rb;
     public bool canJump = true;
@@ -42,6 +42,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Movement(InputAction.CallbackContext ctx)
     {
+        if (ctx.canceled)
+        {
+            move = 0; // always allow release to register
+            return;
+        }
+
         if(canMove){
             move = ctx.ReadValue<Vector2>().x;    
         }

@@ -6,21 +6,36 @@ public class MeditateAbility : Ability
     private int counter;
     private float normalSpeed;
     private PlayerMovement playerMovement;
+    private HealthManager playerHealth;
+    private PlayerAttack playerAttack;
+    public int healthRegen;
     public override void Activate(GameObject parent) {
         // Meditate can be used anytime, hold to meditate, fill "sanity" bar, lock player movement, play meditate animation
         playerMovement = parent.GetComponent<PlayerMovement>();
-        normalSpeed = playerMovement.speed;
+        playerAttack = parent.GetComponent<PlayerAttack>();
+        normalSpeed = 4;    
 
         SpriteRenderer sr = parent.GetComponent<SpriteRenderer>(); // FOR TESTING: CHANGE COLOR OF CIRCLE
         if(sr != null) sr.color = Color.blue;
         //TODO: PLAY ANIMATION
+
+        if (parent.tag.Equals("GhostPlayer"))
+        {
+            parent.tag = "Player";
+            parent.GetComponent<PlayerAttack>().isGhost = false;
+        }
     }
 
     public override void AbilityLoop(GameObject parent) {
-        PlayerMovement playerMovement = parent.GetComponent<PlayerMovement>();
         playerMovement.speed = 0;
         playerMovement.canJump = false;
+        playerAttack.canAttack = false;
         //TODO: INCREASE SANITY + SANITY BAR
+        playerHealth = parent.GetComponent<HealthManager>();
+        if(playerHealth.currentHealth <= playerHealth.maxHealth - healthRegen){
+            playerHealth.currentHealth += healthRegen;  
+            playerHealth.healthBar.SetCurrentHealth(playerHealth.currentHealth);    
+        }   
 
         // counter++; //FOR TESTING
         // Debug.Log("Counter: " + counter);
@@ -28,9 +43,9 @@ public class MeditateAbility : Ability
 
 
     public override void BeginCooldown(GameObject parent) {
-        PlayerMovement playerMovement = parent.GetComponent<PlayerMovement>();
         playerMovement.speed = normalSpeed;
         playerMovement.canJump = true;
+        playerAttack.canAttack = true;
         
         SpriteRenderer sr = parent.GetComponent<SpriteRenderer>();
         if (sr != null) sr.color = Color.white;

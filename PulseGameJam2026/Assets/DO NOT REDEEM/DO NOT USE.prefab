@@ -77,9 +77,8 @@ GameObject:
   - component: {fileID: 2602671362278703481}
   - component: {fileID: 5054174555557705885}
   - component: {fileID: 4090937917145862068}
-  - component: {fileID: 7343999535938323946}
   m_Layer: 6
-  m_Name: EnemyPrefab2
+  m_Name: DO NOT USE
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -249,7 +248,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HealthManager
   maxHealth: 100
   currentHealth: 0
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 538073654411927538, guid: 4b202127524761642b143a2e8b3697eb, type: 3}
+  enemyObject: {fileID: 5736105014304777907, guid: 130f153145ac7784d8fbce3677df7512, type: 3}
 --- !u!114 &5054174555557705885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,26 +284,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   attackOrigin: {fileID: 5861021597616781286}
-  attackHitboxSize: 1
   playerMask:
     serializedVersion: 2
     m_Bits: 0
-  attackDamage: 25
-  cooldownTime: 0.5
---- !u!114 &7343999535938323946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8556361404489358622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05d2e5439de528b4792582d9c97c7b6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyRespawn
-  enemyObject: {fileID: 0}
-  respawnDelay: 1
-  enemyPrefab: {fileID: 0}
-  maxNumEnemy: 1
-  currentNumEnemy: 0
+  attackDamage: 100
+  cooldownTime: 0.1
+  attackInfos: []
