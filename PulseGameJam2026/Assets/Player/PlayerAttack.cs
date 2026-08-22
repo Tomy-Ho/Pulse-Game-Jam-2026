@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,7 +12,10 @@ public class PlayerAttack : MonoBehaviour
     public LayerMask enemyMask;
     public int attackDamage = 25;
     public float cooldownTime = 0.5f;
+    public GameObject playerObject;
     float cooldownTimer = 0f;
+
+    [HideInInspector] public bool isGhost = false;
 
     [NonSerialized] public InputSystem_Actions actions;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -45,7 +49,27 @@ public class PlayerAttack : MonoBehaviour
             Collider2D[] enemy = Physics2D.OverlapCircleAll(attackOrigin.position, attackRadius, enemyMask);
             foreach (var enemies in enemy)
             {
-                enemies.GetComponent<HealthManager>().TakeDamage(attackDamage);
+                
+                if (enemies.tag.Equals("GhostEnemy"))
+                {
+                    if (isGhost)
+                    {
+                       enemies.GetComponent<HealthManager>().TakeDamage(attackDamage); 
+                    } 
+                    else
+                    {
+                        UnityEngine.Debug.Log("Switch player form to ghost");
+                    }
+                    return;
+                }
+                
+                if(enemies.tag.Equals("Enemy"))
+                {
+                    if (!isGhost)
+                    {
+                        enemies.GetComponent<HealthManager>().TakeDamage(attackDamage); 
+                    }
+                } 
             }
             cooldownTimer = cooldownTime;
         }

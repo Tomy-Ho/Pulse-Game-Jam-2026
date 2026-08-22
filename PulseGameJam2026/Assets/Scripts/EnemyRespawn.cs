@@ -7,6 +7,7 @@ public class EnemyRespawn : MonoBehaviour
     public GameObject enemyObject;
     [Serialize] public float respawnDelay = 1f;
     public GameObject enemyPrefab;
+    public GameObject ghostEnemyPrefab;
 
     void Update()
     {
@@ -30,7 +31,22 @@ public class EnemyRespawn : MonoBehaviour
     {
         if (enemyObject == null)
         {
-            enemyObject = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+            RandomizeEnemyVariant();
+        }
+    }
+
+    void RandomizeEnemyVariant()
+    {
+        float randomNum = Random.Range(0f, 1f);
+
+        if (randomNum <= 0.7f)
+        {
+            enemyObject = Instantiate(enemyPrefab, transform.position, Quaternion.identity);    
+        } 
+        else
+        {
+            enemyObject = Instantiate(ghostEnemyPrefab, transform.position, Quaternion.identity);    
+
         }
     }
 
