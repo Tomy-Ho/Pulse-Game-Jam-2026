@@ -53,13 +53,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2609052494492247594, guid: fd06f79f113fbe14dbd2b11e20f57f8c, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 8863077480368480813}
+    - target: {fileID: 2609052494492247594, guid: fd06f79f113fbe14dbd2b11e20f57f8c, type: 3}
       propertyPath: attackRadius
       value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2609052494492247594, guid: fd06f79f113fbe14dbd2b11e20f57f8c, type: 3}
       propertyPath: playerObject
       value: 
-      objectReference: {fileID: 6642308946205135782, guid: fd06f79f113fbe14dbd2b11e20f57f8c, type: 3}
+      objectReference: {fileID: 8863077480368480813}
     - target: {fileID: 2609052494492247594, guid: fd06f79f113fbe14dbd2b11e20f57f8c, type: 3}
       propertyPath: enemyMask.m_Bits
       value: 64
@@ -93,3 +97,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd06f79f113fbe14dbd2b11e20f57f8c, type: 3}
+--- !u!1 &8863077480368480813 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6642308946205135782, guid: fd06f79f113fbe14dbd2b11e20f57f8c, type: 3}
+  m_PrefabInstance: {fileID: 2797231015487369611}
+  m_PrefabAsset: {fileID: 0}
