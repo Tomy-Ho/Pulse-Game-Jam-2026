@@ -188,7 +188,6 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 538073654411927538, guid: 4b202127524761642b143a2e8b3697eb, type: 3}
-  enemyPrefab: {fileID: 6217322948731488828}
 --- !u!114 &8843768820855440106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,7 +225,6 @@ MonoBehaviour:
   respawnDelay: 1
   enemyPrefab: {fileID: 6217322948731488828}
   maxNumEnemy: 1
-<<<<<<< Updated upstream
   currentNumEnemy: 0
 --- !u!114 &-1289111776302449579
 MonoBehaviour:
@@ -278,10 +276,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7647441021874439125}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
-  currentNumEnemy: 1
-  gameController: {fileID: 538457917825941489, guid: 1a55b01258533c8499b9cc71a7834444, type: 3}
->>>>>>> Stashed changes
 --- !u!1 &8420296223262333612
 GameObject:
   m_ObjectHideFlags: 0

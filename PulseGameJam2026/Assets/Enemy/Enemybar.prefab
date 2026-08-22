@@ -237,11 +237,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-<<<<<<< Updated upstream
   m_Value: 100
-=======
-  m_Value: 25
->>>>>>> Stashed changes
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -347,11 +343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-<<<<<<< Updated upstream
   m_Color: {r: 0.990566, g: 0, b: 0, a: 1}
-=======
-  m_Color: {r: 0.956465, g: 0.70882356, b: 0.70882356, a: 1}
->>>>>>> Stashed changes
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
