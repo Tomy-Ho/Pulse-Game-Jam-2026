@@ -250,6 +250,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 0}
+  enemyObject: {fileID: 5736105014304777907, guid: 130f153145ac7784d8fbce3677df7512, type: 3}
 --- !u!114 &5054174555557705885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,12 +285,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   attackOrigin: {fileID: 5861021597616781286}
-  attackHitboxSize: 1
   playerMask:
     serializedVersion: 2
     m_Bits: 0
   attackDamage: 25
   cooldownTime: 0.5
+  attackInfos: []
 --- !u!114 &7343999535938323946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,5 +306,3 @@ MonoBehaviour:
   enemyObject: {fileID: 0}
   respawnDelay: 1
   enemyPrefab: {fileID: 0}
-  maxNumEnemy: 1
-  currentNumEnemy: 0

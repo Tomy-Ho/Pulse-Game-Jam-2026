@@ -17,7 +17,7 @@ public class HealthManager : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-
+        onEnemyDeath();
         healthBar.SetCurrentHealth(currentHealth);
     }
 
@@ -35,6 +35,8 @@ public class HealthManager : MonoBehaviour
             {
                 GameController.Instance.OnPlayerDefeat();
             }
+
+            Destroy(gameObject);
         }
     }
 }

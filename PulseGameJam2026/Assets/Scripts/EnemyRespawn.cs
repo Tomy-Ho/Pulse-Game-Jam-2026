@@ -13,7 +13,7 @@ public class EnemyRespawn : MonoBehaviour
         if (enemyObject == null)
         {
             float timer = respawnDelay;
-
+            timer--;
             if(timer <= 0)
             {
                 SpawnNewEnemy();
