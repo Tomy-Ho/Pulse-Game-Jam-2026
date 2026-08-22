@@ -7,17 +7,15 @@ public class EnemyRespawn : MonoBehaviour
     public GameObject enemyObject;
     [Serialize] public float respawnDelay = 1f;
     public GameObject enemyPrefab;
-
-    void Start()
-    {
-        SpawnNewEnemy();
-    }
+    public int maxNumEnemy = 1;
+    private int currentNumEnemy = 0;
 
     public void OnEnemyDeath()
     {
         if(enemyObject.GetComponent<HealthManager>().currentHealth <= 0)
         {
             StartCoroutine(RespawnTimer());
+            currentNumEnemy = 0;
             Debug.Log("REspawn ahahaha");
         }
     }
@@ -29,6 +27,13 @@ public class EnemyRespawn : MonoBehaviour
     }
     public void SpawnNewEnemy()
     {
-        enemyObject = Instantiate(enemyPrefab, transform.position, Quaternion.identity); 
+        Debug.Log("hi");
+        if (currentNumEnemy <= 0)
+        {
+            Debug.Log("hello");
+            enemyObject = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+            currentNumEnemy++;
+        }
+         
     }
 }
