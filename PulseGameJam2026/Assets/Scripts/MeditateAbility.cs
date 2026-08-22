@@ -22,6 +22,7 @@ public class MeditateAbility : Ability
         if (parent.tag.Equals("GhostPlayer"))
         {
             parent.tag = "Player";
+            parent.GetComponent<PlayerAttack>().isGhost = false;
         }
     }
 
