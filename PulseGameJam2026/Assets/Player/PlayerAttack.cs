@@ -19,12 +19,13 @@ public class PlayerAttack : MonoBehaviour
     public GameObject player;
     public bool canAttack = true;
     public Animator attackAnim;
+    public GameObject animObject;
   
 
     [HideInInspector] public bool isGhost = false;
 
     [NonSerialized] public InputSystem_Actions actions;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Awake()
     {
         actions = new InputSystem_Actions();
@@ -47,7 +48,6 @@ public class PlayerAttack : MonoBehaviour
         playerHealth = player.GetComponent<HealthManager>();
     }
 
-    // Update is called once per frame
     public void OnAttack(InputAction.CallbackContext ctx)
     {
         StartAttack();
@@ -91,18 +91,20 @@ public class PlayerAttack : MonoBehaviour
                 playerHealth.onObjectDeath();
             }   
         }
-        ResetAttack();
     }
 
     void StartAttack()
     {
+        CancelInvoke(nameof(ResetAttack));
         UnityEngine.Debug.Log("start");
-        attackAnim.SetBool("isAttacking", true);
+        animObject.GetComponent<Animator>().SetTrigger("isAttacking");
+        Invoke(nameof(ResetAttack), 0.4f);
     }
 
     void ResetAttack()
     {
-        attackAnim.SetBool("isAttacking", false);
+        animObject.GetComponent<Animator>().SetBool("isAttacking", false);
+        UnityEngine.Debug.Log(animObject.GetComponent<Animator>().GetBool("isAttacking"));
     }
 
     void OnDrawGizmos()
