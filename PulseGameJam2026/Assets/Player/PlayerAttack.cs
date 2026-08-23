@@ -20,6 +20,8 @@ public class PlayerAttack : MonoBehaviour
     public bool canAttack = true;
     public Animator attackAnim;
     public GameObject animObject;
+
+    [SerializeField] AudioClip punchClip;
   
 
     [HideInInspector] public bool isGhost = false;
@@ -51,6 +53,7 @@ public class PlayerAttack : MonoBehaviour
     public void OnAttack(InputAction.CallbackContext ctx)
     {
         StartAttack();
+        AudioSource.PlayClipAtPoint(punchClip,transform.position,0.5f);
         UnityEngine.Debug.Log("hahaha");
         if(canAttack){
             playerHealth.currentHealth -= selfDamage;
