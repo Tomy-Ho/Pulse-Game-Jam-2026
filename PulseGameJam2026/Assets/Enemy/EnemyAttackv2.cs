@@ -18,9 +18,19 @@ public class EnemyAttackv2 : MonoBehaviour
     public int attackDamage = 50;
     public float[] attackInfos;
     public float attackDelay;
+    private SpriteRenderer enemySpriteRenderer; 
+    public Sprite punchSprite;
+    public Sprite bombSprite;
+    public Sprite stompSprite;
+    public Sprite laserSprite;
+    public Sprite GpunchSprite;
+    public Sprite GbombSprite;
+    public Sprite GstompSprite;
+    public Sprite GlaserSprite;
 
     void Start()
     {
+        enemySpriteRenderer = Enemy.GetComponent<SpriteRenderer>();
         if(instance != null && instance == this)
         {
             Destroy(gameObject);
@@ -69,18 +79,51 @@ public class EnemyAttackv2 : MonoBehaviour
         {
             case < 0.25f:
                 Debug.Log("Enemy is using Flat Attack!");
+                if(Enemy.tag == "Enemy"){
+                    Enemy.transform.localScale = new Vector3(0.43f, 0.43f, 0.43f);
+                    enemySpriteRenderer.sprite = stompSprite;
+    
+                }
+                else if(Enemy.tag == "GhostEnemy"){
+                    Enemy.transform.localScale = new Vector3(0.43f, 0.43f, 0.43f);
+                    enemySpriteRenderer.sprite = GstompSprite;
+                }
                 attackPattern = Attackpatterns.AttackPattern.FlatAttack;
                 break;
             case < 0.5f:
                 Debug.Log("Enemy is using Front Attack!");
+                if(Enemy.tag == "Enemy"){
+                    Enemy.transform.localScale = new Vector3(0.51f, 0.51f, 0.51f);
+                    enemySpriteRenderer.sprite = punchSprite;
+                }
+                else if(Enemy.tag == "GhostEnemy"){
+                    Enemy.transform.localScale = new Vector3(0.51f, 0.51f, 0.51f);
+                    enemySpriteRenderer.sprite = GpunchSprite;
+                }
                 attackPattern = Attackpatterns.AttackPattern.FrontAttack;
                 break;
             case < 0.75f:
                 Debug.Log("Enemy is using Big Area Attack!");
+                if(Enemy.tag == "Enemy"){
+                    Enemy.transform.localScale = new Vector3(0.51f, 0.51f, 0.51f);
+                    enemySpriteRenderer.sprite = bombSprite;
+                }
+                else if(Enemy.tag == "GhostEnemy"){
+                    Enemy.transform.localScale = new Vector3(0.51f, 0.51f, 0.51f);
+                    enemySpriteRenderer.sprite = GbombSprite;
+                }
                 attackPattern = Attackpatterns.AttackPattern.BigAreaAttack;
                 break;
             default:
                 Debug.Log("Enemy is using Laser Attack!");
+                if(Enemy.tag == "Enemy"){
+                    Enemy.transform.localScale = new Vector3(0.51f, 0.51f, 0.51f);
+                    enemySpriteRenderer.sprite = laserSprite;
+                }
+                else if(Enemy.tag == "GhostEnemy"){
+                    Enemy.transform.localScale = new Vector3(0.51f, 0.51f, 0.51f);
+                    enemySpriteRenderer.sprite = GlaserSprite;
+                }
                 attackPattern = Attackpatterns.AttackPattern.LaserAttack;
                 break;
         }
