@@ -18,6 +18,7 @@ public class PlayerAttack : MonoBehaviour
     private HealthManager playerHealth;
     public GameObject player;
     public bool canAttack = true;
+    public Animator attackAnim;
   
 
     [HideInInspector] public bool isGhost = false;
@@ -28,7 +29,6 @@ public class PlayerAttack : MonoBehaviour
     {
         actions = new InputSystem_Actions();
         actions.Player.Attack.AddBinding("<Mouse>/leftButton");
-        
     }
 
     void OnEnable()
@@ -48,8 +48,10 @@ public class PlayerAttack : MonoBehaviour
     }
 
     // Update is called once per frame
-    void OnAttack(InputAction.CallbackContext ctx)
+    public void OnAttack(InputAction.CallbackContext ctx)
     {
+        StartAttack();
+        UnityEngine.Debug.Log("hahaha");
         if(canAttack){
             playerHealth.currentHealth -= selfDamage;
             playerHealth.healthBar.SetCurrentHealth(playerHealth.currentHealth);
@@ -79,10 +81,7 @@ public class PlayerAttack : MonoBehaviour
                         }
                     } 
                 }
-                cooldownTimer = cooldownTime;
-                
-                
-                
+                cooldownTimer = cooldownTime; 
             }
             else
             {
@@ -92,6 +91,18 @@ public class PlayerAttack : MonoBehaviour
                 playerHealth.onObjectDeath();
             }   
         }
+        ResetAttack();
+    }
+
+    void StartAttack()
+    {
+        UnityEngine.Debug.Log("start");
+        attackAnim.SetBool("isAttacking", true);
+    }
+
+    void ResetAttack()
+    {
+        attackAnim.SetBool("isAttacking", false);
     }
 
     void OnDrawGizmos()
