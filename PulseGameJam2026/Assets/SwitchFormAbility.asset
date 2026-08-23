@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9df2b36b501d3fd45b48a95757477116, type: 3}
-  m_Name: DashAbility
-  m_EditorClassIdentifier: Assembly-CSharp::DashAbility
-  name: Dash
-  cooldownTime: 2
+  m_Script: {fileID: 11500000, guid: 9569e3dc1306f064c9230832700656b2, type: 3}
+  m_Name: SwitchFormAbility
+  m_EditorClassIdentifier: Assembly-CSharp::SwitchFormAbility
+  name: Switch Player Form
+  cooldownTime: 0
   activeTime: 0.5
-  dashSpeed: 10
