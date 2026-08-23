@@ -63,7 +63,8 @@ public class Enemy : MonoBehaviour
                 break;
             case State.Walking:
                 EnemyMovement enemyMovement = new EnemyMovement();
-                if (Vector2.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) > 2f)
+                if (Vector2.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) > 2f
+                    || Vector2.Distance(transform.position, GameObject.FindGameObjectWithTag("GhostPlayer").transform.position) > 2f)
                 {
                     enemyMovement.walkingsim(this.transform);
                 }

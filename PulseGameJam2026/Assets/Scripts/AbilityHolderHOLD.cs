@@ -4,7 +4,6 @@ using UnityEngine.InputSystem;
 
 public class AbilityHolderHOLD : AbilityHolderBase
 {
-    [SerializeField] AudioClip meditateClip;
     // Update is called once per frame
     void Start(){
         playerMovement = player.GetComponent<PlayerMovement>();
@@ -21,7 +20,6 @@ public class AbilityHolderHOLD : AbilityHolderBase
             case AbilityState.active:
                 if (Keyboard.current[key].isPressed){
                     ability.AbilityLoop(player);
-                    AudioSource.PlayClipAtPoint(meditateClip,transform.position,0.5f);
                 }
                 else{
                     ability.BeginCooldown(player);
