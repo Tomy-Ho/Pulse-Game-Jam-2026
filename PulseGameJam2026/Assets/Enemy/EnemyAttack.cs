@@ -1,5 +1,5 @@
 using UnityEngine;
-
+//DEPRECATED
 public class EnemyAttack : MonoBehaviour
 {
     public float attackDelay;

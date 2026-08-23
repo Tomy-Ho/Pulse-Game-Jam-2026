@@ -1,4 +1,5 @@
 using UnityEngine;
+//DEPRECATED
 public class Logic : MonoBehaviour
 {
     public Transform target;
@@ -43,10 +44,10 @@ public class Logic : MonoBehaviour
         GameObject ghostPlayerTag = GameObject.FindGameObjectWithTag("GhostPlayer");
         if (ghostPlayerTag != null)
         {
-            target = GameObject.FindGameObjectWithTag("GhostPlayer").transform;  
-            return;         
-        } 
-        
+            target = GameObject.FindGameObjectWithTag("GhostPlayer").transform;
+            return;
+        }
+
         GameObject playerTag = GameObject.FindGameObjectWithTag("Player");
         if (playerTag != null)
         {
