@@ -1,0 +1,611 @@
+fileFormatVersion: 2
+guid: 61b548342194e5040ada6b4003a89b51
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1202802902924716950
+    second: Ghost2-Bomb_0
+  - first:
+      213: 1447170168156332070
+    second: Ghost2-Bomb_1
+  - first:
+      213: -1550750581903276953
+    second: Ghost2-Bomb_2
+  - first:
+      213: 184763429231688917
+    second: Ghost2-Bomb_3
+  - first:
+      213: -7508934287877309002
+    second: Ghost2-Bomb_4
+  - first:
+      213: -2638768826094358094
+    second: Ghost2-Bomb_5
+  - first:
+      213: 9199614046482990679
+    second: Ghost2-Bomb_6
+  - first:
+      213: -6837867891184455390
+    second: Ghost2-Bomb_7
+  - first:
+      213: -3937028723346939013
+    second: Ghost2-Bomb_8
+  - first:
+      213: 5345414214163222318
+    second: Ghost2-Bomb_9
+  - first:
+      213: -862073602042192278
+    second: Ghost2-Bomb_10
+  - first:
+      213: -1865181496311600015
+    second: Ghost2-Bomb_11
+  - first:
+      213: -5578930767873913936
+    second: Ghost2-Bomb_12
+  - first:
+      213: 5391706101982099155
+    second: Ghost2-Bomb_13
+  - first:
+      213: -528067036557370811
+    second: Ghost2-Bomb_14
+  - first:
+      213: 3383120779006160617
+    second: Ghost2-Bomb_15
+  - first:
+      213: -3052612490945961016
+    second: Ghost2-Bomb_16
+  - first:
+      213: 5857668892440324407
+    second: Ghost2-Bomb_17
+  - first:
+      213: -9100412414717455910
+    second: Ghost2-Bomb_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ghost2-Bomb_0
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 785
+        width: 128
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69be2a31ed631b010800000000000000
+      internalID: 1202802902924716950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost2-Bomb_1
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 827
+        width: 398
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 620208ab991651410800000000000000
+      internalID: 1447170168156332070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost2-Bomb_2
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 671
+        width: 140
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 764cc6edf80aa7ae0800000000000000
+      internalID: -1550750581903276953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost2-Bomb_3
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 347
+        width: 266
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dc76d62c59609200800000000000000
+      internalID: 184763429231688917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost2-Bomb_4
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 827
+        width: 128
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bd72599c08eac790800000000000000
+      internalID: -7508934287877309002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost2-Bomb_5
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 827
+        width: 428
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b17544cbb5316bd0800000000000000
+      internalID: -2638768826094358094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost2-Bomb_6
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 779
+        width: 218
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 756005fcb389baf70800000000000000
+      internalID: 9199614046482990679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost2-Bomb_7
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 767
+        width: 62
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 221b6eca1630b11a0800000000000000
+      internalID: -6837867891184455390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost2-Bomb_8
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 767
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7365624c3ddc59c0800000000000000
+      internalID: -3937028723346939013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost2-Bomb_9
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 659
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2fc58418e9be2a40800000000000000
+      internalID: 5345414214163222318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost2-Bomb_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 461
+        width: 415
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6e980c50ac4904f0800000000000000
+      internalID: -862073602042192278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost2-Bomb_11
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 275
+        width: 212
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17c27beaf4b8d16e0800000000000000
+      internalID: -1865181496311600015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost2-Bomb_12
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 443
+        width: 392
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bbc06a6608a392b0800000000000000
+      internalID: -5578930767873913936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost2-Bomb_13
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 53
+        width: 236
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d6f2fd122033da40800000000000000
+      internalID: 5391706101982099155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost2-Bomb_14
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 83
+        width: 32
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54a976cf3ddeba8f0800000000000000
+      internalID: -528067036557370811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost2-Bomb_15
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 23
+        width: 158
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eea7e88c6243fe20800000000000000
+      internalID: 3383120779006160617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost2-Bomb_16
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 59
+        width: 110
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c3ee38ec11f2a5d0800000000000000
+      internalID: -3052612490945961016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost2-Bomb_17
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 35
+        width: 374
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 739e2c982de9a4150800000000000000
+      internalID: 5857668892440324407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost2-Bomb_18
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 281
+        width: 314
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad11637ff17d4b180800000000000000
+      internalID: -9100412414717455910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ghost2-Bomb_0: 1202802902924716950
+      Ghost2-Bomb_1: 1447170168156332070
+      Ghost2-Bomb_10: -862073602042192278
+      Ghost2-Bomb_11: -1865181496311600015
+      Ghost2-Bomb_12: -5578930767873913936
+      Ghost2-Bomb_13: 5391706101982099155
+      Ghost2-Bomb_14: -528067036557370811
+      Ghost2-Bomb_15: 3383120779006160617
+      Ghost2-Bomb_16: -3052612490945961016
+      Ghost2-Bomb_17: 5857668892440324407
+      Ghost2-Bomb_18: -9100412414717455910
+      Ghost2-Bomb_2: -1550750581903276953
+      Ghost2-Bomb_3: 184763429231688917
+      Ghost2-Bomb_4: -7508934287877309002
+      Ghost2-Bomb_5: -2638768826094358094
+      Ghost2-Bomb_6: 9199614046482990679
+      Ghost2-Bomb_7: -6837867891184455390
+      Ghost2-Bomb_8: -3937028723346939013
+      Ghost2-Bomb_9: 5345414214163222318
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
