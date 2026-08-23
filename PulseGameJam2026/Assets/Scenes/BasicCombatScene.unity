@@ -1230,6 +1230,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 735942944}
   m_CullTransparentMesh: 1
+--- !u!1 &743739402 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3647638011049114989, guid: e7fe0d9a52d5cbf41a3419484cd0e87b, type: 3}
+  m_PrefabInstance: {fileID: 8129723614097309663}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &743739403 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 673827614645505366, guid: e7fe0d9a52d5cbf41a3419484cd0e87b, type: 3}
@@ -2291,6 +2296,28 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5736105014304777907, guid: 130f153145ac7784d8fbce3677df7512, type: 3}
   m_PrefabInstance: {fileID: 5687575117770225083}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1848127219
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848127215}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dcfa9391db8dfb94cb46b610248a0fb4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1884498716
 GameObject:
   m_ObjectHideFlags: 0
@@ -2591,6 +2618,14 @@ PrefabInstance:
       propertyPath: attackAnim
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 208561560348186529, guid: 9d1a5b7b47915d14892501a0e421c3f9, type: 3}
+      propertyPath: animObjectGhost
+      value: 
+      objectReference: {fileID: 743739402}
+    - target: {fileID: 208561560348186529, guid: 9d1a5b7b47915d14892501a0e421c3f9, type: 3}
+      propertyPath: animObjectPlayer
+      value: 
+      objectReference: {fileID: 613252122}
     - target: {fileID: 640932697652426570, guid: 9d1a5b7b47915d14892501a0e421c3f9, type: 3}
       propertyPath: healthBar
       value: 
@@ -2823,7 +2858,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5736105014304777907, guid: 130f153145ac7784d8fbce3677df7512, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1848127219}
   m_SourcePrefab: {fileID: 100100000, guid: 130f153145ac7784d8fbce3677df7512, type: 3}
 --- !u!1001 &7339698000025554264
 PrefabInstance:
@@ -2941,6 +2979,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1432140021}
     m_Modifications:
+    - target: {fileID: 61265032177575048, guid: e7fe0d9a52d5cbf41a3419484cd0e87b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 248ba46bc4ddef442baaec1a19557893, type: 2}
     - target: {fileID: 673827614645505366, guid: e7fe0d9a52d5cbf41a3419484cd0e87b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.272

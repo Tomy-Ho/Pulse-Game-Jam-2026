@@ -69,6 +69,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5987876586488761111, guid: eea31601326a524499040ff482782692, type: 3}
     - target: {fileID: 2609052494492247594, guid: fd06f79f113fbe14dbd2b11e20f57f8c, type: 3}
+      propertyPath: punchSound
+      value: 
+      objectReference: {fileID: 8300000, guid: df8bf4b3a3db8524aaf0906a50b6f8fb, type: 3}
+    - target: {fileID: 2609052494492247594, guid: fd06f79f113fbe14dbd2b11e20f57f8c, type: 3}
       propertyPath: attackRadius
       value: 0.25
       objectReference: {fileID: 0}
@@ -76,6 +80,14 @@ PrefabInstance:
       propertyPath: playerObject
       value: 
       objectReference: {fileID: 8863077480368480813}
+    - target: {fileID: 2609052494492247594, guid: fd06f79f113fbe14dbd2b11e20f57f8c, type: 3}
+      propertyPath: animObjectGhost
+      value: 
+      objectReference: {fileID: 3647638011049114989, guid: e7fe0d9a52d5cbf41a3419484cd0e87b, type: 3}
+    - target: {fileID: 2609052494492247594, guid: fd06f79f113fbe14dbd2b11e20f57f8c, type: 3}
+      propertyPath: animObjectPlayer
+      value: 
+      objectReference: {fileID: 5987876586488761111, guid: eea31601326a524499040ff482782692, type: 3}
     - target: {fileID: 2609052494492247594, guid: fd06f79f113fbe14dbd2b11e20f57f8c, type: 3}
       propertyPath: enemyMask.m_Bits
       value: 64
