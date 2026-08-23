@@ -312,12 +312,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4808896075801692890}
     - target: {fileID: 4090937917145862068, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090937917145862068, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
       propertyPath: attackDamage
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4090937917145862068, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
       propertyPath: cooldownTime
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054174555557705885, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5861021597616781286, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5861021597616781286, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 7883941715655359823, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -365,15 +381,87 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 5054174555557705885, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
+    - {fileID: 4090937917145862068, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7883941715655359823, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1976193527826591068}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8556361404489358622, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3318579178307591500}
+    - targetCorrespondingSourceObject: {fileID: 8556361404489358622, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -3085519941130811704}
+    - targetCorrespondingSourceObject: {fileID: 8556361404489358622, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4503800271719825195}
   m_SourcePrefab: {fileID: 100100000, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
+--- !u!1 &5346334957501553645 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8556361404489358622, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
+  m_PrefabInstance: {fileID: 4363902330640353011}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3318579178307591500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346334957501553645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f93ddcda4f3481046b69109bfd9dce5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  cooldown: 0
+  isInterrupted: 0
+  isInterruptedCooldown: 0
+--- !u!114 &-3085519941130811704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346334957501553645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483950da340e023489b487358bdb339e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
+  speed: 2
+  target: {fileID: 0}
+--- !u!114 &-4503800271719825195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346334957501553645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1057223cd252eab469cfcf15eb183264, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAttackv2
+  Enemy: {fileID: 5346334957501553645}
+  gaugeMultiplier: 0
+  attackOrigin: {fileID: 7915421709707407637}
+  attackHitbox: {x: 0, y: 0}
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  attackDamage: 50
+  attackInfos: []
+  attackDelay: 0
 --- !u!4 &5901634384390536124 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7883941715655359823, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
+  m_PrefabInstance: {fileID: 4363902330640353011}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7915421709707407637 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5861021597616781286, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
   m_PrefabInstance: {fileID: 4363902330640353011}
   m_PrefabAsset: {fileID: 0}

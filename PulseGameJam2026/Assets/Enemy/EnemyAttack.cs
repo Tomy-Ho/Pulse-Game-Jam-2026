@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    float attackDelay;
+    public float attackDelay;
 
     public Transform attackOrigin;
     private Vector2 attackHitbox;
@@ -16,34 +16,26 @@ public class EnemyAttack : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        getAttackInfos();
         playerMask = LayerMask.GetMask("Player");
         attackDamage = 25;
-        cooldownTime = 2f;
+        attackDelay = 1f;
+        cooldownTime = Random.Range(1f, 4f);
     }
 
-    void getAttackInfos()
-    {
-        attackInfos =  new Attackpatterns().attackPatterns[Random.Range(0, new Attackpatterns().attackPatterns.Length)];
-        attackOrigin.position = new Vector2(transform.position.x + attackInfos[0], transform.position.y + attackInfos[1]);
-        attackHitbox = new Vector2(attackInfos[2], attackInfos[3]);
-    }
+
 
     void Attack()
     {
         Collider2D[] player = Physics2D.OverlapBoxAll(attackOrigin.position, attackHitbox, 0f, playerMask);
         if (player.Length > 0)
         {
-            Debug.Log("Player is in attack range!");
-            Debug.Log("Cooldown timer: " + cooldownTimer);
             foreach (var p in player)
             {
                 p.GetComponent<HealthManager>().TakeDamage(attackDamage);
             }
-            cooldownTimer = cooldownTime;
-
-            getAttackInfos();
         }
+        cooldownTimer = Random.Range(1f, 4f);;
+
     }
 
     void checkCooldown()
