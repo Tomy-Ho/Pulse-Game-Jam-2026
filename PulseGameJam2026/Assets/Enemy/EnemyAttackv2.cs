@@ -32,7 +32,7 @@ public class EnemyAttackv2 : MonoBehaviour
     public void attack(Transform enemyTransform)
     {
         Debug.Log("Enemy is attacking!");
-        playerToEnemyDistance = Vector2.Distance(enemyTransform.position, GameObject.FindGameObjectWithTag("Player").transform.position);
+        playerToEnemyDistance = Vector2.Distance(enemyTransform.position, EnemyMovement.instance.target.transform.position);
         Debug.Log("Player to Enemy Distance: " + playerToEnemyDistance);
         gaugeDistance(playerToEnemyDistance);
     }

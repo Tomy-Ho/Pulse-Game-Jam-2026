@@ -8,11 +8,13 @@ public class MeditateAbility : Ability
     private PlayerMovement playerMovement;
     private HealthManager playerHealth;
     private PlayerAttack playerAttack;
+    private Animator playerAnim;
     public int healthRegen;
     public override void Activate(GameObject parent) {
         // Meditate can be used anytime, hold to meditate, fill "sanity" bar, lock player movement, play meditate animation
         playerMovement = parent.GetComponent<PlayerMovement>();
         playerAttack = parent.GetComponent<PlayerAttack>();
+        playerAnim = parent.GetComponentInChildren<Animator>();
         normalSpeed = 4;    
 
         SpriteRenderer sr = parent.GetComponent<SpriteRenderer>(); // FOR TESTING: CHANGE COLOR OF CIRCLE
@@ -32,6 +34,8 @@ public class MeditateAbility : Ability
         playerAttack.canAttack = false;
         //TODO: INCREASE SANITY + SANITY BAR
         playerHealth = parent.GetComponent<HealthManager>();
+        playerAnim.SetTrigger("isMeditating");
+
         if(playerHealth.currentHealth <= playerHealth.maxHealth - healthRegen){
             playerHealth.currentHealth += healthRegen;  
             playerHealth.healthBar.SetCurrentHealth(playerHealth.currentHealth);    
@@ -48,6 +52,7 @@ public class MeditateAbility : Ability
         playerAttack.canAttack = true;
         
         SpriteRenderer sr = parent.GetComponent<SpriteRenderer>();
+        playerAnim.SetBool("isMeditating", false);
         if (sr != null) sr.color = Color.white;
 
         Debug.Log("Final counter value: " + counter);
