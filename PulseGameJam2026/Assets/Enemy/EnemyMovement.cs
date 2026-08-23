@@ -7,7 +7,7 @@ public class EnemyMovement : MonoBehaviour
         get;
         private set;
     }
-    public float speed = 2f;
+    public float speed;
     public Transform target;
 
     void Start()
@@ -36,14 +36,17 @@ public class EnemyMovement : MonoBehaviour
             target = GameObject.FindGameObjectWithTag("Player").transform;
         }
     }
+
     public void walkingsim(Transform enemyTransform)
     {
         SearchRightPlayerTag();
+        speed = Random.Range(2f, 10f);
         enemyTransform.position = Vector2.MoveTowards(enemyTransform.position, target.transform.position, speed * Time.deltaTime);
     }
 
     public void stareAtPlayer(Transform enemyTransform)
     {
+        SearchRightPlayerTag();
         if (target.position.x - enemyTransform.position.x < 0)
         {
             enemyTransform.localScale = new Vector3(1, 1, 1);  // Nach rechts
