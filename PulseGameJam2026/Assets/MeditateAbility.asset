@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aff7159e1a3acd54da6f0d599f8c5708, type: 3}
   m_Name: MeditateAbility
   m_EditorClassIdentifier: Assembly-CSharp::MeditateAbility
-  name: 
+  name: Meditate
   cooldownTime: 0
   activeTime: 0
+  healthRegen: 5

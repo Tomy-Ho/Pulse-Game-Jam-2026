@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: DashAbility
   m_EditorClassIdentifier: Assembly-CSharp::DashAbility
   name: Dash
-  cooldownTime: 2
-  activateTime: 0.5
-  dashSpeed: 60
+  cooldownTime: 1
+  activeTime: 0.5
+  dashSpeed: 10
