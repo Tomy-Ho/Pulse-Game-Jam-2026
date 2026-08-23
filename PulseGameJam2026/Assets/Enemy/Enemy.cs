@@ -71,11 +71,24 @@ public class Enemy : MonoBehaviour
                 enemySpriteRenderer.sprite = enemyIdle;
                 enemy.transform.localScale = new Vector3(0.51f, 0.51f, 0.51f);
                 EnemyMovement enemyMovement = new EnemyMovement();
-                if (Vector2.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) > 2f
-                    || Vector2.Distance(transform.position, GameObject.FindGameObjectWithTag("GhostPlayer").transform.position) > 2f)
+                GameObject playerPos = GameObject.FindGameObjectWithTag("Player");
+                GameObject ghostPos = GameObject.FindGameObjectWithTag("GhostPlayer");
+                if(playerPos != null)
                 {
-                    enemyMovement.walkingsim(this.transform);
+                    if (Vector2.Distance(transform.position, playerPos.transform.position) > 2f)
+                    {
+                        enemyMovement.walkingsim(this.transform);
+                    }
                 }
+
+                if(ghostPos != null)
+                {
+                    if (Vector2.Distance(transform.position, ghostPos.transform.position) > 2f)
+                    {
+                        enemyMovement.walkingsim(this.transform);
+                    }
+                }
+                
 
                 enemyMovement.stareAtPlayer(this.transform);
                 if (Random.Range(0f, 1f) < 0.3f)

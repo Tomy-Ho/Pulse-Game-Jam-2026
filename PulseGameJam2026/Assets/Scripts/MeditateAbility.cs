@@ -23,6 +23,10 @@ public class MeditateAbility : Ability
 
         if (parent.tag.Equals("GhostPlayer"))
         {
+            GameObject normalPlayer = parent.transform.Find("PlayerVariant")?.gameObject;
+            GameObject ghostPlayer = parent.transform.Find("GhostForm")?.gameObject;
+            normalPlayer.SetActive(true);
+            ghostPlayer.SetActive(false);
             parent.tag = "Player";
             parent.GetComponent<PlayerAttack>().isGhost = false;
         }
