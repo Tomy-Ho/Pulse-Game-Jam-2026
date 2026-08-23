@@ -18,8 +18,8 @@ public class PlayerAttack : MonoBehaviour
     private HealthManager playerHealth;
     public GameObject player;
     public bool canAttack = true;
-    public GameObject animObjectPlayer;
-    public GameObject animObjectGhost;
+    public Animator attackAnim;
+    public GameObject animObject;
 
     public AudioClip punchSound;
   
@@ -98,31 +98,14 @@ public class PlayerAttack : MonoBehaviour
     void StartAttack()
     {
         CancelInvoke(nameof(ResetAttack));
-
-
-        if (player.tag.Equals("Player"))
-        {
-            animObjectPlayer.GetComponent<Animator>().SetBool("isAttacking", true);
-            UnityEngine.Debug.Log("anim start");
-        } 
-        if (player.tag.Equals("GhostPlayer"))
-        {
-            animObjectGhost.GetComponent<Animator>().SetBool("isAttacking", true);
-        }
-        
+        animObject.GetComponent<Animator>().SetTrigger("isAttacking");
         Invoke(nameof(ResetAttack), 0.4f);
     }
 
     void ResetAttack()
     {
-        if (player.tag.Equals("Player"))
-        {
-            animObjectPlayer.GetComponent<Animator>().SetBool("isAttacking", false);
-        } 
-        if (player.tag.Equals("GhostPlayer"))
-        {
-            animObjectGhost.GetComponent<Animator>().SetBool("isAttacking",false);
-        }
+        animObject.GetComponent<Animator>().SetBool("isAttacking", false);
+        UnityEngine.Debug.Log(animObject.GetComponent<Animator>().GetBool("isAttacking"));
     }
 
     void OnDrawGizmos()
