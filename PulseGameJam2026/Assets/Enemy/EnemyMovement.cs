@@ -2,16 +2,12 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-<<<<<<< Updated upstream
     public static EnemyMovement instance
     {
         get;
         private set;
     }
-    public float speed = 2f;
-=======
     public float speed;
->>>>>>> Stashed changes
     public Transform target;
 
     void Start()
