@@ -14,14 +14,15 @@ public class Enemy : MonoBehaviour
     public bool isInterrupted = false;
     public float isInterruptedCooldown;
     private SpriteRenderer enemySpriteRenderer;
-    public Enemy enemy;
     public Sprite enemyIdle;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         currentState = State.Idle;
         cooldown = Random.Range(1f, 3f);
-        enemySpriteRenderer = enemy.GetComponent<SpriteRenderer>();
+        enemySpriteRenderer = GetComponent<SpriteRenderer>();
+        enemySpriteRenderer.sprite = enemyIdle;
+        transform.localScale = new Vector3(0.51f, 0.51f, 0.51f);
     }
 
     // Update is called once per frame
@@ -50,7 +51,9 @@ public class Enemy : MonoBehaviour
         {
             case State.Idle:
                 enemySpriteRenderer.sprite = enemyIdle;
-                enemy.transform.localScale = new Vector3(0.51f, 0.51f, 0.51f);
+                EnemyMovement enemyMovement1 = new EnemyMovement();
+                enemyMovement1.stareAtPlayer(transform);
+                //transform.localScale = new Vector3(0.51f, 0.51f, 0.51f);
                 // Handle idle behavior
                 float probability = Random.Range(0f, 1f);
                 if (probability < 0.1f)
@@ -69,7 +72,7 @@ public class Enemy : MonoBehaviour
                 break;
             case State.Walking:
                 enemySpriteRenderer.sprite = enemyIdle;
-                enemy.transform.localScale = new Vector3(0.51f, 0.51f, 0.51f);
+                //transform.localScale = new Vector3(0.51f, 0.51f, 0.51f);
                 EnemyMovement enemyMovement = new EnemyMovement();
                 GameObject playerPos = GameObject.FindGameObjectWithTag("Player");
                 GameObject ghostPos = GameObject.FindGameObjectWithTag("GhostPlayer");
@@ -88,7 +91,7 @@ public class Enemy : MonoBehaviour
                         enemyMovement.walkingsim(this.transform);
                     }
                 }
-                
+
 
                 enemyMovement.stareAtPlayer(this.transform);
                 if (Random.Range(0f, 1f) < 0.3f)

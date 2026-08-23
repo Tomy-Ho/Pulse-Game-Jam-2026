@@ -1,4 +1,4 @@
-using System.Collections;
+
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -40,22 +40,16 @@ public class EnemyRespawn : MonoBehaviour
 
     void RandomizeEnemyVariant()
     {
-        float randomNum = Random.Range(0f, 1f);
+        float randomNum = UnityEngine.Random.Range(0f, 1f);
 
         if (randomNum <= 0.7f)
         {
-            enemyObject = Instantiate(enemyPrefab, transform.position, Quaternion.identity);    
-        } 
+            enemyObject = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+        }
         else
         {
-            enemyObject = Instantiate(ghostEnemyPrefab, transform.position, Quaternion.identity);    
-
+            enemyObject = Instantiate(ghostEnemyPrefab, transform.position, Quaternion.identity);
         }
-    }
-
-    public void StartSpawnEnemy()
-    {
-        enemyObject = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
     }
 }
 

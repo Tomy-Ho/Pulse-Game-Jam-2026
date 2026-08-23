@@ -18,7 +18,7 @@ public class EnemyAttackv2 : MonoBehaviour
     public int attackDamage = 50;
     public float[] attackInfos;
     public float attackDelay;
-    private SpriteRenderer enemySpriteRenderer; 
+    private SpriteRenderer enemySpriteRenderer;
     public Sprite punchSprite;
     public Sprite bombSprite;
     public Sprite stompSprite;
@@ -82,7 +82,7 @@ public class EnemyAttackv2 : MonoBehaviour
                 if(Enemy.tag == "Enemy"){
                     Enemy.transform.localScale = new Vector3(0.43f, 0.43f, 0.43f);
                     enemySpriteRenderer.sprite = stompSprite;
-    
+
                 }
                 else if(Enemy.tag == "GhostEnemy"){
                     Enemy.transform.localScale = new Vector3(0.43f, 0.43f, 0.43f);

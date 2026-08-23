@@ -49,11 +49,11 @@ public class EnemyMovement : MonoBehaviour
         SearchRightPlayerTag();
         if (target.position.x - enemyTransform.position.x < 0)
         {
-            enemyTransform.localScale = new Vector3(1, 1, 1);  // Nach rechts
+            enemyTransform.localScale = new Vector3(0.51f, 0.51f, 0.51f);  // Nach rechts
         }
         else if (target.position.x - enemyTransform.position.x > 0)
         {
-            enemyTransform.localScale = new Vector3(-1, 1, 1);  // Nach links
+            enemyTransform.localScale = new Vector3(-0.51f, 0.51f, 0.51f);  // Nach links
         }
     }
 }

@@ -2804,6 +2804,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1676896488}
     - target: {fileID: 28122619191141135, guid: 130f153145ac7784d8fbce3677df7512, type: 3}
+      propertyPath: enemyPrefab
+      value: 
+      objectReference: {fileID: 3240629457153089593, guid: 693b9a1045a43b74caee79f94b690509, type: 3}
+    - target: {fileID: 28122619191141135, guid: 130f153145ac7784d8fbce3677df7512, type: 3}
       propertyPath: ghostEnemyPrefab
       value: 
       objectReference: {fileID: 20575121358261388, guid: 7255b1e8106b4d74fb17b9e967e5df22, type: 3}
@@ -3048,10 +3052,62 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4503800271719825195, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
+      propertyPath: bombSprite
+      value: 
+      objectReference: {fileID: -578662983165584938, guid: b7e750723fe830041a90ef338e3e23f8, type: 3}
+    - target: {fileID: -4503800271719825195, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
+      propertyPath: GbombSprite
+      value: 
+      objectReference: {fileID: 1202802902924716950, guid: 61b548342194e5040ada6b4003a89b51, type: 3}
+    - target: {fileID: -4503800271719825195, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
+      propertyPath: laserSprite
+      value: 
+      objectReference: {fileID: 8420366392733119817, guid: 16b05d103a23d504a8e7da89c6153640, type: 3}
+    - target: {fileID: -4503800271719825195, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
+      propertyPath: punchSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 182a7afb8750cf04d85fa41318c6d0e4, type: 3}
+    - target: {fileID: -4503800271719825195, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
+      propertyPath: stompSprite
+      value: 
+      objectReference: {fileID: 3709088561268991311, guid: 67aaa6cf706e7b0498c32266bb66cdcb, type: 3}
+    - target: {fileID: -4503800271719825195, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
+      propertyPath: GlaserSprite
+      value: 
+      objectReference: {fileID: 9078659356838802532, guid: cbe2b4c74df62b747a6a96bfacf675e1, type: 3}
+    - target: {fileID: -4503800271719825195, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
+      propertyPath: GpunchSprite
+      value: 
+      objectReference: {fileID: 3418843207549446795, guid: a631a80664cceb84881dc43d278f5e2c, type: 3}
+    - target: {fileID: -4503800271719825195, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
+      propertyPath: GstompSprite
+      value: 
+      objectReference: {fileID: 3673585821784152603, guid: bed2487ad5bf52444872b9df94a54adb, type: 3}
+    - target: {fileID: 1718892142503492717, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1718892142503492717, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1718892142503492717, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1891259700553812814, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 3318579178307591500, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 5243612927988917912, guid: 693b9a1045a43b74caee79f94b690509, type: 3}
+    - target: {fileID: 3318579178307591500, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
+      propertyPath: enemyIdle
+      value: 
+      objectReference: {fileID: 21300000, guid: bf4c784cbf2e6584b9e48b37a8515454, type: 3}
     - target: {fileID: 4699065981024950255, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -3063,6 +3119,18 @@ PrefabInstance:
     - target: {fileID: 5346334957501553645, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5901634384390536124, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5901634384390536124, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5901634384390536124, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5901634384390536124, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3103,6 +3171,10 @@ PrefabInstance:
     - target: {fileID: 5901634384390536124, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5901634384390536124, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
