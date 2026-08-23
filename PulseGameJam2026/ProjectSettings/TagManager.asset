@@ -7,6 +7,10 @@ TagManager:
   - Enemy
   - GhostEnemy
   - GhostPlayer
+  - EnemyAnim
+  - GhostEnemyAnim
+  - GhostPlayerAnim
+  - PlayerAnim
   layers:
   - Default
   - TransparentFX
