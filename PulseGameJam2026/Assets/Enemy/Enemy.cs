@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         currentState = State.Idle;
-        cooldown = 3f;
+        cooldown = Random.Range(1f, 3f);
     }
 
     // Update is called once per frame
@@ -63,7 +63,11 @@ public class Enemy : MonoBehaviour
                 break;
             case State.Walking:
                 EnemyMovement enemyMovement = new EnemyMovement();
-                enemyMovement.walkingsim(this.transform);
+                if (Vector2.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) > 2f)
+                {
+                    enemyMovement.walkingsim(this.transform);
+                }
+
                 enemyMovement.stareAtPlayer(this.transform);
                 if (Random.Range(0f, 1f) < 0.3f)
                 {
@@ -79,7 +83,7 @@ public class Enemy : MonoBehaviour
                 if (cooldown <= 0)
                 {
                     EnemyAttackv2.instance.attack(this.transform);
-                    cooldown = 3f;
+                    cooldown = Random.Range(1f, 3f);
                     isInterruptedCooldown = 1f;
                 }
                 currentState = State.Idle; // Return to idle after attackings
