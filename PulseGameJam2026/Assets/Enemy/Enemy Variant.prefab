@@ -100,6 +100,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1128514166649045366, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1128514166649045366, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1718892142503492717, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bf4c784cbf2e6584b9e48b37a8515454, type: 3}
     - target: {fileID: 1718892142503492717, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -118,7 +130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5346334957501553645, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
       propertyPath: m_Name
-      value: Enemy Variant 1
+      value: Enemy Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5901634384390536124, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
       propertyPath: m_LocalPosition.x
