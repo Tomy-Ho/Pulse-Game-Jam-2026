@@ -44,6 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f54d296e4f3954da553825a2d5d441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameController
-  scoreManager: {fileID: 6570499004345138466, guid: a1eeb1278e62efc45aa5407cdd5776d4, type: 3}
   playerObject: {fileID: 6642308946205135782, guid: fd06f79f113fbe14dbd2b11e20f57f8c, type: 3}
-  enemyRespawn: {fileID: 8556361404489358622, guid: ef3eb2915d1bae340b28e15b111e6d5e, type: 3}
+  enemyRespawn: {fileID: 5736105014304777907, guid: 130f153145ac7784d8fbce3677df7512, type: 3}

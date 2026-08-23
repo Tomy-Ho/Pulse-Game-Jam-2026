@@ -11,6 +11,7 @@ public class PlayerAttack : MonoBehaviour
     public float attackRadius = 1f;
     public LayerMask enemyMask;
     public int attackDamage = 25;
+    public int selfDamage = 50;
     public float cooldownTime = 0.5f;
     public GameObject playerObject;
     float cooldownTimer = 0f;
@@ -50,7 +51,7 @@ public class PlayerAttack : MonoBehaviour
     void OnAttack(InputAction.CallbackContext ctx)
     {
         if(canAttack){
-            playerHealth.currentHealth -= 3;
+            playerHealth.currentHealth -= selfDamage;
             playerHealth.healthBar.SetCurrentHealth(playerHealth.currentHealth);
             if(cooldownTimer <= 0)
             {
@@ -86,6 +87,9 @@ public class PlayerAttack : MonoBehaviour
             else
             {
                 cooldownTimer -= Time.deltaTime;
+            }
+            if(playerHealth.currentHealth <= 0){
+                playerHealth.onObjectDeath();
             }   
         }
     }

@@ -17,11 +17,11 @@ public class HealthManager : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        onEnemyDeath();
+        onObjectDeath();
         healthBar.SetCurrentHealth(currentHealth);
     }
 
-    public void onEnemyDeath()
+    public void onObjectDeath()
     {
         if (currentHealth <= 0)
         {

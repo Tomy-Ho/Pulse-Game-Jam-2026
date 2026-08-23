@@ -1,28 +1,14 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class AbilityHolderPRESS : MonoBehaviour
+public class AbilityHolderPRESS : AbilityHolderBase
 {
-    public GameObject player;
-    public Ability ability;
-    float cooldownTime;
-    float activeTime;
-    enum AbilityState
-    {
-        ready,
-        active,
-        cooldown
-    }
-
-    AbilityState state = AbilityState.ready;
     
-    public Key key;
-
-    void Update(){
+    protected override void Update(){
         switch(state) {
             case AbilityState.ready:
                 if (Keyboard.current[key].wasPressedThisFrame){
-                    ability.Activate(gameObject);
+                    ability.Activate(player);
                     activeTime = ability.activeTime;
                     state = AbilityState.active;
                     
@@ -33,7 +19,7 @@ public class AbilityHolderPRESS : MonoBehaviour
                     activeTime -= Time.deltaTime;
                 }
                 else {
-                    ability.BeginCooldown(gameObject);
+                    ability.BeginCooldown(player);
                     state = AbilityState.cooldown;
                     cooldownTime = ability.cooldownTime;                    
                 }

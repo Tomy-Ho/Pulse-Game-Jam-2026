@@ -1,41 +1,27 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class AbilityHolderHOLD : MonoBehaviour
+public class AbilityHolderHOLD : AbilityHolderBase
 {
-    public GameObject player;
-    private PlayerMovement playerMovement;
-    public Ability ability;
-    float cooldownTime;
-    enum AbilityState
-    {
-        ready,
-        active,
-        cooldown
-    }
-    AbilityState state = AbilityState.ready;
-    
-    public Key key;
-
+    // Update is called once per frame
     void Start(){
         playerMovement = player.GetComponent<PlayerMovement>();
     }
-    // Update is called once per frame
-    void Update(){
+    protected override void Update(){
         switch(state) {
             case AbilityState.ready:
                 if(Keyboard.current[key].wasPressedThisFrame && playerMovement.isGrounded){
-                    ability.Activate(gameObject);
+                    ability.Activate(player);
                     state = AbilityState.active;  
                 }
             break;
 
             case AbilityState.active:
                 if (Keyboard.current[key].isPressed){
-                    ability.AbilityLoop(gameObject);
+                    ability.AbilityLoop(player);
                 }
                 else{
-                    ability.BeginCooldown(gameObject);
+                    ability.BeginCooldown(player);
                     state = AbilityState.cooldown;
                     cooldownTime = ability.cooldownTime;
                 }
