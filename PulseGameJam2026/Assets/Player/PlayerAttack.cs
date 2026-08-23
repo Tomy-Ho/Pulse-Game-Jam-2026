@@ -54,7 +54,6 @@ public class PlayerAttack : MonoBehaviour
     {
         StartAttack();
         AudioSource.PlayClipAtPoint(punchClip,transform.position,0.5f);
-        UnityEngine.Debug.Log("hahaha");
         if(canAttack){
             playerHealth.currentHealth -= selfDamage;
             playerHealth.healthBar.SetCurrentHealth(playerHealth.currentHealth);
@@ -99,7 +98,6 @@ public class PlayerAttack : MonoBehaviour
     void StartAttack()
     {
         CancelInvoke(nameof(ResetAttack));
-        UnityEngine.Debug.Log("start");
         animObject.GetComponent<Animator>().SetTrigger("isAttacking");
         Invoke(nameof(ResetAttack), 0.4f);
     }

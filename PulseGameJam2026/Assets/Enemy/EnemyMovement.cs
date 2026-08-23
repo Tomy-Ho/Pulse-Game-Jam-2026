@@ -2,8 +2,24 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    public static EnemyMovement instance
+    {
+        get;
+        private set;
+    }
     public float speed = 2f;
     public Transform target;
+
+    void Start()
+    {
+        if(instance != null && instance == this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
+        SearchRightPlayerTag();
+    }
 
     void SearchRightPlayerTag()
     {
@@ -28,7 +44,6 @@ public class EnemyMovement : MonoBehaviour
 
     public void stareAtPlayer(Transform enemyTransform)
     {
-        Transform target = GameObject.FindGameObjectWithTag("Player").transform;
         if (target.position.x - enemyTransform.position.x < 0)
         {
             enemyTransform.localScale = new Vector3(1, 1, 1);  // Nach rechts
