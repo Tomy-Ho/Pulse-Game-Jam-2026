@@ -52,10 +52,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1071333416665637986, guid: fd06f79f113fbe14dbd2b11e20f57f8c, type: 3}
+      propertyPath: meditateClip
+      value: 
+      objectReference: {fileID: 8300000, guid: df8bf4b3a3db8524aaf0906a50b6f8fb, type: 3}
     - target: {fileID: 2609052494492247594, guid: fd06f79f113fbe14dbd2b11e20f57f8c, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 8863077480368480813}
+    - target: {fileID: 2609052494492247594, guid: fd06f79f113fbe14dbd2b11e20f57f8c, type: 3}
+      propertyPath: punchClip
+      value: 
+      objectReference: {fileID: 8300000, guid: df8bf4b3a3db8524aaf0906a50b6f8fb, type: 3}
+    - target: {fileID: 2609052494492247594, guid: fd06f79f113fbe14dbd2b11e20f57f8c, type: 3}
+      propertyPath: animObject
+      value: 
+      objectReference: {fileID: 5987876586488761111, guid: eea31601326a524499040ff482782692, type: 3}
     - target: {fileID: 2609052494492247594, guid: fd06f79f113fbe14dbd2b11e20f57f8c, type: 3}
       propertyPath: attackRadius
       value: 0.25
@@ -72,6 +84,10 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 3329512718281803457, guid: fd06f79f113fbe14dbd2b11e20f57f8c, type: 3}
+      propertyPath: enemyObject
+      value: 
+      objectReference: {fileID: 5346334957501553645, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
     - target: {fileID: 4329814616501262392, guid: fd06f79f113fbe14dbd2b11e20f57f8c, type: 3}
       propertyPath: m_Layer
       value: 7
