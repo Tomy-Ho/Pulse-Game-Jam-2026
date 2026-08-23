@@ -9,6 +9,8 @@ public class EnemyRespawn : MonoBehaviour
     public GameObject enemyPrefab;
     public GameObject ghostEnemyPrefab;
 
+    public AudioClip enemySound;
+
     void Update()
     {
         if (enemyObject == null)
@@ -29,6 +31,7 @@ public class EnemyRespawn : MonoBehaviour
 
     public void SpawnNewEnemy()
     {
+        AudioSource.PlayClipAtPoint(enemySound,transform.position,1f);
         if (enemyObject == null)
         {
             RandomizeEnemyVariant();
