@@ -1022,6 +1022,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1848127215 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5736105014304777907, guid: 130f153145ac7784d8fbce3677df7512, type: 3}
+  m_PrefabInstance: {fileID: 5687575117770225083}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1976519440
 GameObject:
   m_ObjectHideFlags: 0
@@ -1177,6 +1182,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1247974030}
+    - target: {fileID: 640932697652426570, guid: 9d1a5b7b47915d14892501a0e421c3f9, type: 3}
+      propertyPath: enemyObject
+      value: 
+      objectReference: {fileID: 1848127215}
     - target: {fileID: 3285672897077270495, guid: 9d1a5b7b47915d14892501a0e421c3f9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.75
