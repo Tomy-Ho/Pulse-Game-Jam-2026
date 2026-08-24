@@ -8,18 +8,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4503800271719825195, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
+      propertyPath: GbombSprite
+      value: 
+      objectReference: {fileID: 184763429231688917, guid: 61b548342194e5040ada6b4003a89b51, type: 3}
+    - target: {fileID: -4503800271719825195, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
+      propertyPath: GlaserSprite
+      value: 
+      objectReference: {fileID: -4961957764282568895, guid: cbe2b4c74df62b747a6a96bfacf675e1, type: 3}
+    - target: {fileID: -4503800271719825195, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
+      propertyPath: GpunchSprite
+      value: 
+      objectReference: {fileID: 6212075091224951829, guid: a631a80664cceb84881dc43d278f5e2c, type: 3}
+    - target: {fileID: -4503800271719825195, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
+      propertyPath: GstompSprite
+      value: 
+      objectReference: {fileID: -2472616109862406363, guid: bed2487ad5bf52444872b9df94a54adb, type: 3}
     - target: {fileID: 1718892142503492717, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
       propertyPath: m_Color.b
-      value: 0.83137256
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1718892142503492717, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
       propertyPath: m_Color.g
-      value: 0.78840566
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1718892142503492717, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
       propertyPath: m_Color.r
-      value: 0.11372547
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3318579178307591500, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
+      propertyPath: enemyIdle
+      value: 
+      objectReference: {fileID: 1140162392447849250, guid: b033c15b17e1c024d82186baf14ed4b6, type: 3}
     - target: {fileID: 4699065981024950255, guid: 64bd095166bdbfd46aa393ffd71d5e06, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

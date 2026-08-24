@@ -13,11 +13,16 @@ public class Enemy : MonoBehaviour
     public float cooldown;
     public bool isInterrupted = false;
     public float isInterruptedCooldown;
+    private SpriteRenderer enemySpriteRenderer;
+    public Sprite enemyIdle;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         currentState = State.Idle;
         cooldown = Random.Range(1f, 3f);
+        enemySpriteRenderer = GetComponent<SpriteRenderer>();
+        enemySpriteRenderer.sprite = enemyIdle;
+        transform.localScale = new Vector3(0.51f, 0.51f, 0.51f);
     }
 
     // Update is called once per frame
@@ -45,6 +50,10 @@ public class Enemy : MonoBehaviour
         switch (currentState)
         {
             case State.Idle:
+                enemySpriteRenderer.sprite = enemyIdle;
+                EnemyMovement enemyMovement1 = new EnemyMovement();
+                enemyMovement1.stareAtPlayer(transform);
+                //transform.localScale = new Vector3(0.51f, 0.51f, 0.51f);
                 // Handle idle behavior
                 float probability = Random.Range(0f, 1f);
                 if (probability < 0.1f)
@@ -62,12 +71,27 @@ public class Enemy : MonoBehaviour
                 Debug.Log("Enemy is idle!");
                 break;
             case State.Walking:
+                enemySpriteRenderer.sprite = enemyIdle;
+                //transform.localScale = new Vector3(0.51f, 0.51f, 0.51f);
                 EnemyMovement enemyMovement = new EnemyMovement();
-                if (Vector2.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) > 2f
-                    || Vector2.Distance(transform.position, GameObject.FindGameObjectWithTag("GhostPlayer").transform.position) > 2f)
+                GameObject playerPos = GameObject.FindGameObjectWithTag("Player");
+                GameObject ghostPos = GameObject.FindGameObjectWithTag("GhostPlayer");
+                if(playerPos != null)
                 {
-                    enemyMovement.walkingsim(this.transform);
+                    if (Vector2.Distance(transform.position, playerPos.transform.position) > 2f)
+                    {
+                        enemyMovement.walkingsim(this.transform);
+                    }
                 }
+
+                if(ghostPos != null)
+                {
+                    if (Vector2.Distance(transform.position, ghostPos.transform.position) > 2f)
+                    {
+                        enemyMovement.walkingsim(this.transform);
+                    }
+                }
+
 
                 enemyMovement.stareAtPlayer(this.transform);
                 if (Random.Range(0f, 1f) < 0.3f)
